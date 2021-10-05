@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Simple Static List  Filter</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+    
+    
+    
+    <!-- For keyword made search -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+   <div class="top">
+       <div class="topWords">
+        <h1>Local Non-Profit Organizations</h1>
+        <h2>Find needed support. Volunteer your time. Join a group.</h2>
+        <h3>Search through the database to find organizations of interest.</h3>
+       </div>
+           <img src="MCL_Vector_Full.png" alt="Monmouth County Library Logo" class="logo">
+    </div> 
+    
+
+
+  <!-- <input type="text" id="name-filter" placeholder="Search through the list"></input> -->
+    
+
+  <input class="form-control" id="myInput" type="text" placeholder="Type here to filter the database">
+
+        <select id="specializationsDropdown" oninput="filterTable()">
+            <option>All</option>
+  <option>Health</option>
+  <option>Museums</option>
+  <option>French</option>
+</select>
+        
+        
+  <table id="organizations" class="table table-bordered table-striped">
+      <thead>
+    <tr id="col-names">
+      <th class="header">Name</th>
+      <th class="header">Specializations</th>
+      <th class="header">Phone</th>
+      <th class="header">Address</th>
+    </tr>
+          </thead>
+      <tbody id="myTable">
+    <tr>
+      <td>Allaire Village Inc.</td>
+      <td>Historical Societies<br>Museums</td>
+      <td>732-919-3500</td>
+      <td>4165 Route 524<br>P.O. Box 220</td>
+    </tr>
+    <tr>
+      <td>Alliance Francaise</td>
+      <td>French<br>Group Identity<br>Ethnicity</td>
+      <td>732-747-9698</td>
+      <td>10 Sheraton Lane<br>Rumson, NJ<br>07760</td>
+    </tr>
+    <tr>
+      <td>American Association of Critical Care Nurses</td>
+      <td>Nursing<br>Professional Organizations</td>
+      <td>732-462-6976</td>
+      <td>12 Country View Drive<br>Freehold, NJ<br>07728</td>
+    </tr>
+    <tr>
+      <td>American Heart Association - Monmouth County</td>
+      <td>Health<br>Heart Disease</td>
+      <td>609-208-0020</td>
+      <td>1 Union Street, Suite 301<br>Robbinsville, NJ<br>08691</td>
+    </tr>
+          </tbody>
+  </table>
+        
+
+    
+    </div>
+<!-- For Keyword Searching -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="./script.js"></script>
+
+<!-- For Drop-Down Searching -->
+</script>
+
+</body>
+</html>
