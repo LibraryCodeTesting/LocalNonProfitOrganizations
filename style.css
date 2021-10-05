@@ -1,0 +1,163 @@
+.hidden {
+  display: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+/* Narrow font */ 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap'); /* Bold Font */
+
+
+.html,
+body {
+    overflow-x: hidden;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background: #ffffff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #8360c3, #2ebf91); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #8360c3, #2ebf91); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.top {
+    /*  display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+    overflow: hidden;  /* removes the white space on top of the page */
+    background-color: rgba(255, 255, 255,0.5);
+    border-bottom: 3px solid #0a5bb2;
+    padding-top: .1vw;
+    padding-bottom: .1vw;
+}
+
+.topWords {
+    /* border: 3px solid red; */
+    width: 60vw;
+    float: left;
+    margin-left: 15vw;
+    margin-top: .5vw;
+}
+
+.logo{
+    width: 13%;
+    margin: 2vw;
+   /* border: 3px solid purple; */
+    display: flex;
+    overflow: hidden;
+}
+
+.top h1 {
+    width: 100%;
+    font-size: 3vw;
+    text-align: center;
+    /* border: 3px solid red; */
+    color: #fb3e09;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.top h2 {
+    width: 100%;
+    font-size: 2vw;
+    text-align: center;
+    /* border: 3px solid red; */
+    color: #0a5bb2;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: -.09 vw;
+    font-weight: 100;
+}
+
+.top h3 {
+    width: 100%;
+    font-size: 1.5vw;
+    text-align: center;
+    /* border: 3px solid red; */
+    color: #0a5bb2;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.wrapper {
+  max-width: 80vw;
+  background: #eee;
+  margin-top: 5vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3vw;
+  transition: all ease 500ms;
+}
+
+
+input {
+  border:3px solid #e4e4e4;
+  border-radius: 5px;
+  width: 80vw;   /* this moves things */
+  font-size: 150%;
+  /* background: #0a5bb2; */
+  margin-top: 3vw;
+  transition: all ease 250ms;
+  outline: 0;
+  font-weight: 900;
+    margin-left: auto;
+    margin-right: auto;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+    padding: .5vw;
+-webkit-box-shadow: 0px 0px 22px -2px #000000; 
+box-shadow: 0px 0px 22px -2px #000000;
+    
+}
+
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    /* border: 2px solid #26c6da; */
+    border-collapse: collapse; /* removes the white space between cells */
+      width: 80vw;
+  table-layout: fixed;  /* Keeps the table the same width */
+}
+
+.header {
+background-color: #4A4A4A;
+color: #FFFFFF;
+    padding: 1vw;
+    font-size: 1.3em;
+    background-color: rgba(207, 207, 207, 0.6);/*#F7F7F7*/;
+    border: 1px solid black;
+}
+
+
+td {
+padding: 1.2vw;
+text-align: center;
+margin-left: 1vw;
+border: 1px solid black;
+font-family: "verdana", serif;
+font-size: 1em;
+color: #ffffff;
+
+}
+
+
+/* First row hover ***********************************/
+tr:first-child:hover {    /* something changed in the table to make the first two "first child" */
+background-color: rgba(207, 207, 207,0.0)
+}
+
+tr:nth-child(even) {
+background-color: rgba(0,0,255,0);/*#F7F7F7*/;
+    opacity: 1;
+}
+tr:nth-child(odd) {
+background-color: rgba(0,0,255,0);/*#E0E0E0*/;
+    opacity: 1;
+}
+
+tr:hover /*td:not(:first-child)*/ {
+background-color: rgba(207, 207, 207,0.3);
+    color: #ffffff;
+}
