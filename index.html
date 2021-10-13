@@ -15,6 +15,14 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
+    
+    
+    
+    <div class="bg"></div>
+    
+    
+    <div class="content">
+    
    <div class="top">
        <div class="topWords">
         <h1>Local Non-Profit Organizations</h1>
@@ -29,17 +37,31 @@
   <!-- <input type="text" id="name-filter" placeholder="Search through the list"></input> -->
     
 
-  <input class="form-control" id="myInput" type="text" placeholder="Type here to filter the database">
-
-        <select id="specializationsDropdown" oninput="filterTable()">
-            <option>All</option>
+  <input class="form-control" id="myInput" type="text" placeholder="Type here to filter the database">'
+    
+<div class="dropdowns">
+<select id="specializationsDropdown" oninput="filterTable()">
+  <option>All</option>
   <option>Health</option>
   <option>Museums</option>
   <option>French</option>
+  <option>Group Identity</option>
+  <option>Professional Organizations</option>
+  <option>Religious Organizations</option>
+<option>Chinese</option>
+<option>Animals</option>
+<option>Islam</option>
 </select>
+      
+<select id="citiesDropdown" oninput="filterTable2()">
+  <option>All</option>
+  <option>Rumson</option>
+  <option>Freehold</option>
+  <option>Robbinsville</option>
+</select>
+    </div>
         
-        
-  <table id="organizations" class="table table-bordered table-striped">
+  <table>
       <thead>
     <tr id="col-names">
       <th class="header">Name</th>
@@ -59,7 +81,7 @@
       <td>Alliance Francaise</td>
       <td>French<br>Group Identity<br>Ethnicity</td>
       <td>732-747-9698</td>
-      <td>10 Sheraton Lane<br>Rumson, NJ<br>07760</td>
+      <td>10 Sheraton Lane<br>Rumson<br>07760</td>
     </tr>
     <tr>
       <td>American Association of Critical Care Nurses</td>
@@ -68,10 +90,34 @@
       <td>12 Country View Drive<br>Freehold, NJ<br>07728</td>
     </tr>
     <tr>
-      <td>American Heart Association - Monmouth County</td>
-      <td>Health<br>Heart Disease</td>
-      <td>609-208-0020</td>
-      <td>1 Union Street, Suite 301<br>Robbinsville, NJ<br>08691</td>
+      <td>Islamic Society of Monmouth County</td>
+      <td>Religious Organizations<br>Group Identity<br>Islam<br>Religious Education</td>
+      <td>732-671-3321</td>
+      <td>496 Red Hill Road<br>Middletown, NJ<br>07748</td>
+    </tr>
+    <tr>
+      <td>Greyhound Friends of New Jersey</td>
+      <td>Dogs<br>Animals</td>
+      <td>732-356-4370</td>
+      <td>PO Box 4416<br>Cherry Hill, NJ<br>08034</td>
+    </tr>
+    <tr>
+      <td>Fidelity Chinese School</td>
+      <td>Ethnicity<br>Group Identity<br>Education<br>Chinese</td>
+      <td>732-701-7746</td>
+      <td>"355 County Road 520<br>Marlboro, NJ<br>07746</td>
+    </tr>
+    <tr>
+      <td>Crohn's and Colitis Foundation of America</td>
+      <td>Health<br>Charitable Foundations</td>
+      <td>732-786-9960</td>
+      <td>"45 Wilson Avenue<br>Manalapan, NJ<br>07726</td>
+    </tr>
+    <tr>
+      <td>Consumers League of New Jersey</td>
+      <td>Advocacy<br>Legal Services</td>
+      <td>973-744-6449</td>
+      <td>60 South Fullerton Avenue<br>Montclair, NJ<br>07042</td>
     </tr>
           </tbody>
   </table>
@@ -79,8 +125,11 @@
 
     
     </div>
+
 <!-- For Keyword Searching -->
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="./script.js"></script>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    
+    <script  src="./script.js"></script>
 
 <!-- For Drop-Down Searching -->
 </script>
