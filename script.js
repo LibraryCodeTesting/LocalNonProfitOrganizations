@@ -60,7 +60,7 @@ function filterTable() {
     cells = row.getElementsByTagName("td");
     special = cells[1] || null; // gets the 2nd `td` or nothing
     // if the filter is set to 'All', or this is the header row, or 2nd `td` text matches filter
-    if (filter === "All" || !special || (special.textContent.includes(filter))) {
+    if (filter === "All Specializations" || !special || (special.textContent.includes(filter))) {
       row.style.display = ""; // shows this row
     }
     else {
@@ -82,7 +82,7 @@ function filterTable2() {
     cells = row.getElementsByTagName("td");
     special = cells[3] || null; // gets the 2nd `td` or nothing
     // if the filter is set to 'All', or this is the header row, or 2nd `td` text matches filter
-    if (filter === "All" || !special || (special.textContent.includes(filter))) {
+    if (filter === "All Cities" || !special || (special.textContent.includes(filter))) {
       row.style.display = ""; // shows this row
     }
     else {
@@ -90,3 +90,33 @@ function filterTable2() {
     }
   }
 }
+
+
+var element = document.getElementById("specializationsDropdown");
+
+element.addEventListener('mousedown', function () {
+	this.size=5;
+});
+element.addEventListener('change', function () {
+	this.blur();
+});
+
+//Changing this edits the looks of the dropdown, but allows it to retract too 
+element.addEventListener('blur', function () {
+	this.size=0;
+});  
+
+var element = document.getElementById("citiesDropdown");
+
+element.addEventListener('mousedown', function () {
+	this.size=5;
+});
+element.addEventListener('change', function () {
+	this.blur();
+});
+
+//Changing this edits the looks of the dropdown, but allows it to retract too 
+element.addEventListener('blur', function () {
+	this.size=0;
+});  
+
