@@ -1,6 +1,4 @@
-.hidden {
-  display: none;
-}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 /* Narrow font */ 
 
@@ -15,10 +13,31 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+
+.bg {
+   background: #ffffff; /* fallback for old browsers */
+   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);  
+   background-repeat: no-repeat; /* prevents baclground from moving as it filters */
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -1;
+}
+
 body {
-  background: #ffffff; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #8360c3, #2ebf91); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #8360c3, #2ebf91); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+ /*  background: -webkit-linear-gradient(to left, #8360c3, #2ebf91); /* Chrome 10-25, Safari 5.1-6 */
+/*   background: linear-gradient(to left, #8360c3, #2ebf91); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+   /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+    
+  /* background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+ background-blend-mode: screen; */
+   
+    
+
+
 }
 
 .top {
@@ -31,6 +50,19 @@ body {
     padding-top: .1vw;
     padding-bottom: .1vw;
 }
+    
+    
+    /************************ Neumorphism
+      background: var(--color);
+  -webkit-animation: 1s -0.3s 1 paused opacify;
+          animation: 1s -0.3s 1 paused opacify;
+  -webkit-backdrop-filter: blur(1.5rem);
+          backdrop-filter: blur(1.5rem);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: -0.25rem -0.25rem 0.5rem rgba(255, 255, 255, 0.07), 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.12), -0.75rem -0.75rem 1.75rem rgba(255, 255, 255, 0.07), 0.75rem 0.75rem 1.75rem rgba(0, 0, 0, 0.12), inset 8rem 8rem 8rem rgba(0, 0, 0, 0.05), inset -8rem -8rem 8rem rgba(255, 255, 255, 0.05);
+    
+    */
+
 
 .topWords {
     /* border: 3px solid red; */
@@ -90,7 +122,7 @@ body {
 
 input {
   border:3px solid #e4e4e4;
-  border-radius: 5px;
+  border-radius: .5vw;
   width: 80vw;   /* this moves things */
   font-size: 150%;
   /* background: #0a5bb2; */
@@ -109,11 +141,36 @@ box-shadow: 0px 0px 22px -2px #000000;
     
 }
 
+.dropdowns {
+    /* border:3px solid red; */
+    margin: 2%;
+}
+#specializationsDropdown {
+    margin-left: 35%;
+    background-color: #ffffff;
+    border-radius: .5vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 10vw;
+    -webkit-box-shadow: 0px 0px 1.5vw -.1vw #000000; 
+box-shadow: 0px 0px 1.5vw -.1vw #000000;
+}
+
+#citiesDropdown {
+    margin-left: 31%;
+    background-color: #ffffff;
+    border-radius: .5vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 10vw;
+    -webkit-box-shadow: 0px 0px 1.5vw -.1vw #000000; 
+box-shadow: 0px 0px 1.5vw -.1vw #000000;
+}
 
 table {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+
     margin-bottom: 5%;
     /* border: 2px solid #26c6da; */
     border-collapse: collapse; /* removes the white space between cells */
@@ -144,8 +201,9 @@ color: #ffffff;
 
 
 /* First row hover ***********************************/
-tr:first-child:hover {    /* something changed in the table to make the first two "first child" */
-background-color: rgba(207, 207, 207,0.0)
+
+th {
+    pointer-events: none;
 }
 
 tr:nth-child(even) {
@@ -157,7 +215,10 @@ background-color: rgba(0,0,255,0);/*#E0E0E0*/;
     opacity: 1;
 }
 
-tr:hover /*td:not(:first-child)*/ {
+tr:hover {
 background-color: rgba(207, 207, 207,0.3);
     color: #ffffff;
 }
+
+
+
