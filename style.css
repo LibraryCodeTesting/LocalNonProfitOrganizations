@@ -184,15 +184,26 @@ td, th {
     border-top: none;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 td:first-child, th:first-child {
      border-left: none;
 }
 th:first-child {
-            border-top-left-radius:1vw;
+            border-top-left-radius:.9vw;
 }
 
 th:last-child {
-        border-top-right-radius:1vw;
+        border-top-right-radius:.9vw;
 }
 
 td {
@@ -203,12 +214,10 @@ td {
     font-size: 1em;
 }
 
-
-/* First row hover ***********************************/
-
 th {
     pointer-events: none;
-
+    position: sticky;
+    top: 0;
 }
 
 tr:nth-child(even) {
@@ -224,6 +233,18 @@ tr:hover {
     background-color: rgba(207, 207, 207,0.15);
     color: #17b03b;
 }
+
+
+/* hide the boder from the sticky top ****************************/
+.hideCorners {
+    background-color: red;
+    width: 100vw;
+    z-index: 2;
+}
+
+
+
+
 
 
 /* Smaller Screens ********************************/
