@@ -120,3 +120,7 @@ element.addEventListener('blur', function () {
 	this.size=0;
 });  
 
+var links = document.links;
+for (var i = 0; i < links.length; i++) {
+     links[i].target = "_blank";
+}
