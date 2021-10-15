@@ -130,11 +130,11 @@ box-shadow: 0px 0px 1vw -.1vw #000000;
 #citiesDropdown {
     position: absolute;
     z-index: 1;
-    margin-left: 77%;
+    margin-left: 74%;
     background-color: #ffffff;
     border-radius: .5vw;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    width: 10vw;
+    width: 15vw;
     -webkit-box-shadow: 0px 0px 1vw -.1vw #000000; 
 box-shadow: 0px 0px 1vw -.1vw #000000;
     padding: .35vw;
@@ -176,14 +176,10 @@ td, th {
     
 }
 
-.header {
-    background-color: #0a5bb2;
-    color: #ffffff;
-    padding: 1vw;
-    font-size: 1.3em;
-    border-top: none;
-}
 
+a:link {
+    target="_blank";
+}
 
 
 
@@ -218,6 +214,11 @@ th {
     pointer-events: none;
     position: sticky;
     top: 0;
+    background-color: #0a5bb2;
+    color: #ffffff;
+    padding: 1vw;
+    font-size: 1.3em;
+    border-top: none;
 }
 
 tr:nth-child(even) {
@@ -270,14 +271,11 @@ ul.dropdown-menu.inner{
     overflow-y: auto;
 }
     
-.header {
-    background-color: #4A4A4A;
-    color: #FFFFFF;
-    padding: 1vw;
+th {
     font-size: .5em;
-    background-color: rgba(207, 207, 207, 0.6);/*#F7F7F7*/;
-    border: 1px solid black;
+
 }
+    
 
 td {
     font-size: .5em;
