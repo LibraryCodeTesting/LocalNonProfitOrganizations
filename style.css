@@ -130,16 +130,22 @@ box-shadow: 0px 0px 1vw -.1vw #000000;
 #citiesDropdown {
     position: absolute;
     z-index: 1;
-    margin-left: 74%;
+    margin-left: 77%;
     background-color: #ffffff;
     border-radius: .5vw;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    width: 15vw;
+    width: 10vw;
     -webkit-box-shadow: 0px 0px 1vw -.1vw #000000; 
 box-shadow: 0px 0px 1vw -.1vw #000000;
     padding: .35vw;
 }
 
+.topSearch{
+     border: 1px solid rgba(255, 255, 255, 0); /*This makes the white BG spread to all parts*/
+        position: sticky;
+    top: 0;
+    background-color: #ffffff;
+}
 
  *:focus {  /* This removes the blue border from focus items, such as an active dropdown list */
    outline: 0;
@@ -176,10 +182,14 @@ td, th {
     
 }
 
-
-a:link {
-    target="_blank";
+.header {
+    background-color: #0a5bb2;
+    color: #ffffff;
+    padding: 1vw;
+    font-size: 1.3em;
+    border-top: none;
 }
+
 
 
 
@@ -213,12 +223,7 @@ td {
 th {
     pointer-events: none;
     position: sticky;
-    top: 0;
-    background-color: #0a5bb2;
-    color: #ffffff;
-    padding: 1vw;
-    font-size: 1.3em;
-    border-top: none;
+    top: 23%;
 }
 
 tr:nth-child(even) {
@@ -236,12 +241,7 @@ tr:hover {
 }
 
 
-/* hide the boder from the sticky top ****************************/
-.hideCorners {
-    background-color: red;
-    width: 100vw;
-    z-index: 2;
-}
+
 
 
 
@@ -251,7 +251,65 @@ tr:hover {
 /* Smaller Screens ********************************/
 @media screen and (max-width: 700px) {
 
+.top {
+    overflow: hidden;  /* removes the white space on top of the page */
+    background-color: rgba(255, 255, 255,1);
+    border-bottom: 3px solid #0a5bb2;
+    padding-top: .1vw;
+    padding-bottom: .1vw;
+    
+}
+    
+.topWords {
+    /* border: 3px solid red; */
+    width: 60vw;
+    float: left;
+    margin-left: 15vw;
+    margin-top: .5vw;
+}
 
+.logo{
+    width: 20%;
+    margin: 2vw;
+    margin-top: 4%;
+    display: flex;
+    overflow: hidden;
+}
+
+.top h1 {
+    width: 100%;
+    font-size: 4.8vw;
+    text-align: center;
+    color: #fb3e09;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.top h2 {
+    width: 100%;
+    font-size: 2.9vw;
+    text-align: center;
+    color: #0a5bb2;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: -.08vw;
+    font-weight: 100;
+}
+
+.top h3 {
+    width: 100%;
+    font-size: 2.5vw;
+    text-align: center;
+    /* border: 3px solid red; */
+    color: #0a5bb2;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+    
+    
+    
+    
+    
+    
+    
+    
     
 
 #specializationsDropdown {
@@ -271,11 +329,14 @@ ul.dropdown-menu.inner{
     overflow-y: auto;
 }
     
-th {
+.header {
+    background-color: #4A4A4A;
+    color: #FFFFFF;
+    padding: 1vw;
     font-size: .5em;
-
+    background-color: rgba(207, 207, 207, 0.6);/*#F7F7F7*/;
+    border: 1px solid black;
 }
-    
 
 td {
     font-size: .5em;
