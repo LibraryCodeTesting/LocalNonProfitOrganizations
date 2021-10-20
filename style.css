@@ -210,6 +210,7 @@ td, th {
     padding: 1vw;
     font-size: 1.3em;
     border-top: none;
+    z-index: -1;
 }
 
 
