@@ -105,7 +105,9 @@ body {
   background-color: #555; /* Add a dark-grey background on hover */
 }
 
-
+.topSearch {
+  z-index: 100;
+}
 
 input {
     border: 0; /* removes default input border */
@@ -133,7 +135,6 @@ box-shadow: 0 0 0 .7vw rgba(228, 228, 228);
     margin: 2%;
     position: relative;
     margin-bottom: 7%; /* moves the table down from the dropdowns */
-    
 }
 #specializationsDropdown {
     position: absolute; /* this and z-index make the menu stay over the table when active */
@@ -146,7 +147,7 @@ box-shadow: 0 0 0 .7vw rgba(228, 228, 228);
         -webkit-box-shadow: 0px 0px 1vw -.1vw #000000; 
 box-shadow: 0px 0px 1vw -.1vw #000000;
     padding: .35vw;
-
+z-index: 100;
 }
 
 #citiesDropdown {
@@ -201,17 +202,9 @@ table {
 td, th {
     border-left:solid black 1px;
     border-top:solid black 1px;
-    
 }
 
-.header {
-    background-color: #0a5bb2;
-    color: #ffffff;
-    padding: 1vw;
-    font-size: 1.3em;
-    border-top: none;
-    z-index: -1;
-}
+
 
 
 
@@ -247,6 +240,12 @@ th {
     pointer-events: none;
     position: sticky;
     top: 23%;
+      background-color: #0a5bb2;
+    color: #ffffff;
+    padding: 1vw;
+    font-size: 1.3em;
+    border-top: none;
+   /* z-index: -1; */
 }
 
 tr:nth-child(even) {
