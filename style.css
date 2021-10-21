@@ -34,31 +34,27 @@ body {
     
 .topWords {
     /* border: 3px solid red; */
-    width: 60vw;
     float: left;
-    margin-left: 15vw;
+    margin-left: 25vw;
     margin-top: .5vw;
+    align-content: left;
 }
 
 .logo{
     width: 13%;
-    margin: 2vw;
+    padding: 2vw;
+    margin-right: 10vw;
     display: flex;
-    overflow: hidden;
 }
 
 .top h1 {
-    width: 100%;
     font-size: 3vw;
-    text-align: center;
     color: #fb3e09;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 .top h2 {
-    width: 100%;
     font-size: 2vw;
-    text-align: center;
     color: #0a5bb2;
     font-family: 'Roboto Condensed', sans-serif;
     letter-spacing: -.08vw;
@@ -66,23 +62,12 @@ body {
 }
 
 .top h3 {
-    width: 100%;
     font-size: 1.5vw;
-    text-align: center;
     /* border: 3px solid red; */
     color: #0a5bb2;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.wrapper {
-  max-width: 80vw;
-  background: #eee;
-  margin-top: 5vw;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 3vw;
-  transition: all ease 500ms;
-}
 
 #myBtn {
   display: none; /* Hidden by default */
@@ -96,7 +81,7 @@ body {
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 1.5%; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 1vw; /* Rounded corners */
   font-size: 18px; /* Increase font size */
   width: 6%;
 }
@@ -115,36 +100,30 @@ body {
 
 input {
     border: 0; /* removes default input border */
-  border-radius: .5vw;
-  width: 80vw;   /* this moves things */
-  font-size: 150%;
+    border-radius: .5vw;
+    width: 50vw;   /* this moves things */
+    font-size: 150%;
   /* background: #0a5bb2; */
-  margin-top: 3vw;
-  transition: all ease 250ms;
-  outline: 0;
-  font-weight: 900;
+    margin-top: 3vw;
+    outline: 0;
+    font-weight: 900;
     margin-left: auto;
     margin-right: auto;
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+    display: flex; 
     padding: .5vw;
 -webkit-box-shadow: 0px 0px 0 .7vw rgba(228, 228, 228); 
-box-shadow: 0 0 0 .7vw rgba(228, 228, 228);
-    
+box-shadow: 0 0 0 .7vw rgba(228, 228, 228); 
 }
 
 .dropdowns {
     /* border:3px solid red; */
     margin: 2%;
-    position: relative;
     margin-bottom: 7%; /* moves the table down from the dropdowns */
 }
 #specializationsDropdown {
     position: absolute; /* this and z-index make the menu stay over the table when active */
     z-index: 1;
-    margin-left: 32%;
-    background-color: #ffffff;
+    margin-left: 31%;
     border-radius: .5vw;
     border: 1px solid rgba(255, 255, 255, 0.2);
     width: 15vw;
@@ -157,8 +136,7 @@ z-index: 100;
 #citiesDropdown {
     position: absolute;
     z-index: 1;
-    margin-left: 77%;
-    background-color: #ffffff;
+    margin-left: 73%;
     border-radius: .5vw;
     border: 1px solid rgba(255, 255, 255, 0.2);
     width: 10vw;
@@ -167,29 +145,21 @@ box-shadow: 0px 0px 1vw -.1vw #000000;
     padding: .35vw;
 }
 
-
-
  *:focus {  /* This removes the blue border from focus items, such as an active dropdown list */
    outline: 0;
  }
 
 
+/* Hover color within dropdown menus *************************************************/
 select > option:hover {
 background-color: rgba(207, 207, 207, 0.6)!important;
-
 }
-
-/* select > option {
-    background-color: #ffffff !important;
-/* border:3px solid red; */
-  /*  color: #000000!important;
-} */
 
 table {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5%;
-    border-collapse: separate;
+ /*   border-collapse: separate; */
     border:solid black 1px;
     border-spacing: 0; /* removed the white space between cells */
     border-radius:1vw;
@@ -239,7 +209,7 @@ th {
     pointer-events: none;
     position: sticky;
     top: 0%;
-      background-color: #0a5bb2;
+    background-color: #0a5bb2;
     color: #ffffff;
     padding: 1vw;
     font-size: 1.3em;
@@ -247,8 +217,10 @@ th {
    /* z-index: -1; */
 }
 
+
+/* Color for every other row ********************************/
 tr:nth-child(even) {
-    background-color: rgba(0,0,255,0);/*#F7F7F7*/;
+    background-color: rgba(92, 131, 178,.05);/*#F7F7F7*/;
     opacity: 1;
 }
 tr:nth-child(odd) {
@@ -256,8 +228,9 @@ tr:nth-child(odd) {
     opacity: 1;
 }
 
+/* The Hover Color ******************************************/
 tr:hover {
-    background-color: rgba(207, 207, 207,0.15);
+    background-color: rgba(207, 207, 207,0.4);
     color: #17b03b;
 }
 
@@ -272,65 +245,50 @@ tr:hover {
 /* Smaller Screens ********************************/
 @media screen and (max-width: 700px) {
 
+.topWords {
+    /* border: 3px solid red; */
+    float: left;
+    margin-left: 8vw;
+    margin-top: .5vw;
+    margin-right: 5vw;
+}
+    
 .top {
     overflow: hidden;  /* removes the white space on top of the page */
     background-color: rgba(255, 255, 255,1);
     border-bottom: 3px solid #0a5bb2;
     padding-top: .1vw;
     padding-bottom: .1vw;
-    
 }
     
-.topWords {
-    /* border: 3px solid red; */
-    width: 60vw;
-    float: left;
-    margin-left: 15vw;
-    margin-top: .5vw;
-}
-
 .logo{
-    width: 20%;
+    width: 18%;
     margin: 2vw;
-    margin-top: 4%;
-    display: flex;
-    overflow: hidden;
+    margin-top: 2%;
 }
 
 .top h1 {
-    width: 100%;
     font-size: 4.8vw;
-    text-align: center;
-    color: #fb3e09;
-    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: -.5vw;
+    margin-top: 5vw;
 }
 
 .top h2 {
-    width: 100%;
     font-size: 2.9vw;
-    text-align: center;
-    color: #0a5bb2;
-    font-family: 'Roboto Condensed', sans-serif;
-    letter-spacing: -.08vw;
-    font-weight: 100;
 }
 
 .top h3 {
-    width: 100%;
     font-size: 2.5vw;
-    text-align: center;
-    /* border: 3px solid red; */
-    color: #0a5bb2;
-    font-family: 'Roboto Condensed', sans-serif;
 }
-    
     
     
  table {
     width: 95vw;
 }   
     
-    
+input {
+border: rgba(255, 255, 255,1);
+}    
     
     
     
@@ -360,7 +318,6 @@ ul.dropdown-menu.inner{
     color: #FFFFFF;
     padding: 1vw;
     font-size: .5em;
-    background-color: rgba(207, 207, 207, 0.6);/*#F7F7F7*/;
     border: 1px solid black;
 }
 
