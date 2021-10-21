@@ -2,11 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 /* Narrow font */ 
 
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap'); /* Bold Font */
 
 
-.html,
+
 body {
     overflow-x: hidden;
     height: 100%;
@@ -51,6 +50,7 @@ body {
     font-size: 3vw;
     color: #fb3e09;
     font-family: 'Roboto Condensed', sans-serif;
+        margin-bottom: -.4vw;
 }
 
 .top h2 {
@@ -243,7 +243,7 @@ tr:hover {
 
 
 /* Smaller Screens ********************************/
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
 
 .topWords {
     /* border: 3px solid red; */
@@ -269,7 +269,6 @@ tr:hover {
 
 .top h1 {
     font-size: 4.8vw;
-    margin-bottom: -.5vw;
     margin-top: 5vw;
 }
 
