@@ -145,8 +145,8 @@ box-shadow: 0px 0px 1vw -.1vw #000000;
     padding: .35vw;
 }
 
- *:focus {  /* This removes the blue border from focus items, such as an active dropdown list */
-   outline: 0;
+/* *:focus {  /* This removes the blue border from focus items, such as an active dropdown list */
+   /* outline: 0; */
  }
 
 
@@ -282,7 +282,7 @@ tr:hover {
     
     
  table {
-    width: 95vw;
+    width: 85vw;
 }   
     
 input {
@@ -301,6 +301,7 @@ border: rgba(255, 255, 255,1);
 #citiesDropdown {
     font-size: 2vw;
     width: 20vw;
+    margin-left: 70%;
 }
     
 div.dropdown-menu.open{
@@ -312,13 +313,9 @@ ul.dropdown-menu.inner{
     overflow-y: auto;
 }
     
-.header {
-    background-color: #4A4A4A;
-    color: #FFFFFF;
-    padding: 1vw;
-    font-size: .5em;
-    border: 1px solid black;
-}
+    th {
+        font-size: .8em;
+    }
 
 td {
     font-size: .7em;
