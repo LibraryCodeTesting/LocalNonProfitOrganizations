@@ -1,4 +1,4 @@
-
+/*Text input search bar***********************************************************/
 
 $(document).ready(function(){
   $("#myInput").on("keyup", function() {
@@ -10,139 +10,188 @@ $(document).ready(function(){
 });
 
 
-/**  var $products = $('#products li');
-$('#filter').keyup(function() {
-    var re = new RegExp($(this).val(), "i");
-    $products.removeClass('hidden').filter(function() {
-        return !re.test($(this).text());
-    }).addClass('hidden');
-}); 
 
-**/
 
-/***************************************************************
-var $phone = $('#phone li');
-$('#filter2').keyup(function() {
-    var re = new RegExp($(this).val(), "i");
-    $phone.removeClass('hidden').filter(function() {
-        return !re.test($(this).text());
-    }).addClass('hidden');
-});
 
-var $address = $('#address li');
-$('#filter3').keyup(function() {
-    var re = new RegExp($(this).val(), "i");
-    $address.removeClass('hidden').filter(function() {
-        return !re.test($(this).text());
-    }).addClass('hidden');
-}); 
 
-var $subjects = $('#subjects li');
-$('#filter4').keyup(function() {
-    var re = new RegExp($(this).val(), "i");
-    $subjects.removeClass('hidden').filter(function() {
-        return !re.test($(this).text());
-    }).addClass('hidden');
-}); 
 
-*************************************************/
 
-function filterTable() {
-  // Variables
-  let dropdown, table, rows, cells, country, filter;
-  dropdown = document.getElementById("specializationsDropdown");
-  table = document.getElementById("myTable");
-  rows = table.getElementsByTagName("tr");
-  filter = dropdown.value;
 
-  // Loops through rows and hides those with countries that don't match the filter
-  for (let row of rows) { // `for...of` loops through the NodeList
-    cells = row.getElementsByTagName("td");
-    special = cells[1] || null; // gets the 2nd `td` or nothing
-    // if the filter is set to 'All', or this is the header row, or 2nd `td` text matches filter
-    if (filter === "All Specializations" || !special || (special.textContent.includes(filter))) {
-      row.style.display = ""; // shows this row
+
+/*Clear filters buttons, next to dropdowns*****************************************/
+    function Reset() {
+        
+        var dropDown = document.getElementById("specializationsDropdown");
+        dropDown.selectedIndex = 0;
+        
+        var dropDown2 = document.getElementById("citiesDropdown");
+        dropDown2.selectedIndex = 0;
+        
+        
+          let dropdown, table, rows, filter;
+            dropdown    = document.getElementById("specializationsDropdown");
+            table       = document.getElementById("myTable");
+            rows        = table.getElementsByTagName("tr");
+            filter      = dropdown.value;
+        
+  // Loops through rows, hides what doesn't match the filter
+        
+          for (let row of rows) { // loops through the NodeList
+              
+            cells       = row.getElementsByTagName("td");
+            special     = cells[1] || null; // 2nd column
+    
+            // if filter is 'All', the 2nd header row, or in 2nd column and matches filter
+            if (filter === "All Specializations" || !special || (special.textContent.includes(filter))) {
+                    row.style.display = ""; // reveals matching rows
+            }
+            else {
+                    row.style.display = "none"; // hides rows that don't match
+            }
+        }
     }
-    else {
-      row.style.display = "none"; // hides this row
-    }
-  }
-}
 
-function filterTable2() {
-  // Variables
-  let dropdown, table, rows, cells, country, filter;
-  dropdown = document.getElementById("citiesDropdown");
-  table = document.getElementById("myTable");
-  rows = table.getElementsByTagName("tr");
-  filter = dropdown.value;
 
-  // Loops through rows and hides those with countries that don't match the filter
-  for (let row of rows) { // `for...of` loops through the NodeList
-    cells = row.getElementsByTagName("td");
-    special = cells[3] || null; // gets the 2nd `td` or nothing
-    // if the filter is set to 'All', or this is the header row, or 2nd `td` text matches filter
-    if (filter === "All Cities" || !special || (special.textContent.includes(filter))) {
-      row.style.display = ""; // shows this row
-    }
-    else {
-      row.style.display = "none"; // hides this row
-    }
-  }
-}
 
+
+
+
+
+
+/*Specializations Dropdown***********************************************************/
+
+    function filterTable() {
+        let dropdown, table, rows, filter;
+            dropdown    = document.getElementById("specializationsDropdown");
+            table       = document.getElementById("myTable");
+            rows        = table.getElementsByTagName("tr");
+            filter      = dropdown.value;
+
+        // Loops through rows, hides what doesn't match the filter
+        
+        for (let row of rows) { //Loops through the NodeList
+            cells       = row.getElementsByTagName("td");
+            special     = cells[1] || null; // 2nd column
+    
+            // if filter is 'All', the 2nd header row, or in 2nd column and matches filter
+            if (filter === "All Specializations" || !special || (special.textContent.includes(filter))) {
+                    row.style.display = ""; // reveals matching rows
+            }
+            else {
+                    row.style.display = "none"; // hides rows that don't match
+            }
+        }
+    }
 
 var element = document.getElementById("specializationsDropdown");
 
-element.addEventListener('mousedown', function () {
-	this.size=5;
-});
-element.addEventListener('change', function () {
-	this.blur();
-});
+    element.addEventListener('mousedown', function () {
+        this.size=5;
+    });
 
-//Changing this edits the looks of the dropdown, but allows it to retract too 
-element.addEventListener('blur', function () {
-	this.size=0;
-});  
+    element.addEventListener('change', function () {
+        this.blur();
+    });
+
+    //Retracts the dropdown when users click outside of the active dropdown
+    element.addEventListener('blur', function () {
+        this.size=0;
+    }); 
+
+
+
+
+
+
+
+
+/*Cities Dropdown***********************************************************/
+
+    function filterTable2() {
+
+      let dropdown, table, rows, cells, country, filter;
+            dropdown    = document.getElementById("citiesDropdown");
+            table       = document.getElementById("myTable");
+            rows        = table.getElementsByTagName("tr");
+            filter      = dropdown.value;
+
+      // Loops through rows, hides what doesn't match the filter
+        
+      for (let row of rows) { //Loops through the NodeList
+            cells       = row.getElementsByTagName("td");
+            special     = cells[3] || null; // 2nd column
+
+        if (filter === "All Cities" || !special || (special.textContent.includes(filter))) {
+          row.style.display = ""; // reveals matching rows
+        }
+        else {
+          row.style.display = "none"; // hides rows that don't match
+        }
+      }
+    }
+
 
 var element = document.getElementById("citiesDropdown");
 
-element.addEventListener('mousedown', function () {
-	this.size=5;
-});
-element.addEventListener('change', function () {
-	this.blur();
-});
+    element.addEventListener('mousedown', function () {
+        this.size=5;
+    });
+    element.addEventListener('change', function () {
+        this.blur();
+    });
 
-//Changing this edits the looks of the dropdown, but allows it to retract too 
-element.addEventListener('blur', function () {
-	this.size=0;
-});  
-
-var links = document.links;
-for (var i = 0; i < links.length; i++) {
-     links[i].target = "_blank";
-}
+    //This allows the dropdown to retract when users click outside of the active dropdown
+    element.addEventListener('blur', function () {
+        this.size=0;
+    });  
 
 
 
-//Get the button:
-mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+
+
+
+
+
+/* Makes all links in the table open in a seperate tab **********************************/
+    var links = document.links;
+
+    for (var i = 0; i < links.length; i++) {
+         links[i].target = "_blank";
+    }
+
+
+
+
+
+
+
+
+
+
+/*scroll to top button*******************************************************/
+
+    mybutton = document.getElementById("myBtn");
+
+    // Shows the button after users scroll 20px
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } 
+      else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // Returns users to the top upon clicking
+    function topFunction() {
+      document.body.scrollTop = 0; // Safari
+      document.documentElement.scrollTop = 0; // Chrome, Firefox, IE and Opera
+    }
+
+
+
