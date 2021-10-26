@@ -370,15 +370,14 @@ ul.dropdown-menu.inner{
     overflow-y: auto;
 }
     
-
-
-    th {
+th {
     pointer-events: none;
     position: sticky;
     top: 200px;
     padding: 1vw;
     font-size: .8em;
 }
+    
 td {
     font-size: .7em;
     font-weight: bold;
@@ -411,7 +410,22 @@ td {
 }
     
     
-    
+  .form-control {
+    border: 3px solid #dddddd; /* removes default text input border */
+    border-radius: .5vw;
+    width: 50vw;   
+    font-size: 150%;
+    margin-top: 3vw;
+    outline: 0;
+    font-weight: 900;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; /* Keeps the text input centered */
+    padding: .5vw;
+    -webkit-box-shadow: 0px 0px 0 .7vw rgba(228, 228, 228); 
+    box-shadow: 0 0 0 .7vw rgba(228, 228, 228); 
+    margin-bottom: 4%;
+}  
     
     
     
