@@ -309,6 +309,7 @@ tr:hover {
 
 .top h2 {
     font-size: 2.9vw;
+    font-weight: b0old;
 }
 
 .top h3 {
@@ -388,11 +389,11 @@ td {
 
   top: 6vw; 
   left: 2vw; 
-  padding: 1.5%;
+  padding: 1%;
   border-radius: 1vw; 
   font-size: 2em; 
-  width: 15%;
-  height: 10%;
+  width: 8%;
+  height: 8%;
         z-index: 100;
 }
 
