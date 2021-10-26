@@ -293,7 +293,7 @@ tr:hover {
     border-bottom: 3px solid #0a5bb2;
     padding-top: .1vw;
     padding-bottom: .1vw;
-    height: 325px;
+    height: 300px;
 }
     
 .logo{
@@ -373,7 +373,7 @@ ul.dropdown-menu.inner{
     th {
     pointer-events: none;
     position: sticky;
-    top: 300px;
+    top: 200px;
     padding: 1vw;
     font-size: .8em;
 }
