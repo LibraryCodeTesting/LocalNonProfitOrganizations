@@ -5,7 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap'); /* Bold Font */
 
 
-
 body {
     overflow-x: hidden;
     height: 100%;
@@ -13,44 +12,51 @@ body {
 }
 
 
-.bg {
+
+
+
+/* If a background is added, then unblock this code, to keep it stagnant behind the rest of the page *******************************************************************************/
+
+/* .bg {
     background: #ffffff; 
     background-repeat: no-repeat; /* prevents baclground from moving as it filters */
-    background-position: center;
+ /*   background-position: center;
     height: 100vh;
     width: 100vw;
     position: fixed;
-    z-index: -1;
-}
+    z-index: -1; 
+} */
+
+
+
+
+
+/* Top contents ******************************************************************/
 
 .top {
     overflow: hidden;  /* removes the white space on top of the page */
     background-color: rgba(255, 255, 255,1);
     border-bottom: 3px solid #0a5bb2;
-    padding-top: .1vw;
-    padding-bottom: .1vw;
+    height: 200px;
 }
     
 .topWords {
-    /* border: 3px solid red; */
     float: left;
     margin-left: 25vw;
     margin-top: .5vw;
-    align-content: left;
 }
 
 .logo{
     width: 13%;
     padding: 2vw;
     margin-right: 10vw;
-    display: flex;
 }
 
 .top h1 {
     font-size: 3vw;
     color: #fb3e09;
     font-family: 'Roboto Condensed', sans-serif;
-        margin-bottom: -.4vw;
+    margin-bottom: -.4vw;
 }
 
 .top h2 {
@@ -63,90 +69,88 @@ body {
 
 .top h3 {
     font-size: 1.5vw;
-    /* border: 3px solid red; */
     color: #0a5bb2;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 
+
+
+
+/* "Top" button to return to top of page ****************************************************/
+
 #myBtn {
   display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 2vw; /* Place the button at the bottom of the page */
-  right: 2vw; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: #17b03b; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 1.5%; /* Some padding */
-  border-radius: 1vw; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  position: fixed; 
+  bottom: 2vw; 
+  right: 2vw; 
+  border: none; 
+  outline: none; 
+  background-color: #17b03b; 
+  color: #ffffff; 
+  cursor: pointer; 
+  padding: 1.5%;
+  border-radius: 1vw; 
+  font-size: 1.75vw; 
   width: 6%;
 }
 
 #myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+  background-color: #555555; 
 }
 
+
+
+
+
+/* Div holding all search contents - text search, dropdowns, and filter reset buttons *******/
+
 .topSearch {
-    border: 1px solid rgba(255, 255, 255, 0); /*This makes the white BG spread to all parts*/
     position: sticky;
     top: 0;
     background-color: #ffffff;
-    z-index: 100;
+    height: 175px;
+    z-index: 99; /* Keeps the white background above the table during sticky scrolling */
+    border: 1px solid rgba(255, 255, 255, 0); /*This makes the white BG spread to all parts, if a background is ever added here, and also keeps the sticky where it should be*/
+    margin-bottom: 1%;
 }
 
-input {
-    border: 0; /* removes default input border */
+
+/* Text input search bar **************************************************************/
+.form-control {
+    border: 0; /* removes default text input border */
     border-radius: .5vw;
-    width: 50vw;   /* this moves things */
+    width: 50vw;   
     font-size: 150%;
-  /* background: #0a5bb2; */
     margin-top: 3vw;
     outline: 0;
     font-weight: 900;
     margin-left: auto;
     margin-right: auto;
-    display: flex; 
+    display: flex; /* Keeps the text input centered */
     padding: .5vw;
--webkit-box-shadow: 0px 0px 0 .7vw rgba(228, 228, 228); 
-box-shadow: 0 0 0 .7vw rgba(228, 228, 228); 
+    -webkit-box-shadow: 0px 0px 0 .7vw rgba(228, 228, 228); 
+    box-shadow: 0 0 0 .7vw rgba(228, 228, 228); 
+    margin-bottom: 4%;
 }
 
-.dropdowns {
-    /* border:3px solid red; */
-    margin: 2%;
-    margin-bottom: 7%; /* moves the table down from the dropdowns */
-}
+
+/* Specializations Dropdown **************************************************************/
 #specializationsDropdown {
-    position: absolute; /* this and z-index make the menu stay over the table when active */
-    z-index: 1;
-    margin-left: 31%;
+    position: absolute; /* prevents other items from moving when the list is dropped down */
+    margin-left: 30%;
     border-radius: .5vw;
     border: 1px solid rgba(255, 255, 255, 0.2);
     width: 15vw;
-        -webkit-box-shadow: 0px 0px 1vw -.1vw #000000; 
-box-shadow: 0px 0px 1vw -.1vw #000000;
-    padding: .35vw;
-z-index: 100;
-}
-
-#citiesDropdown {
-    position: absolute;
-    z-index: 1;
-    margin-left: 73%;
-    border-radius: .5vw;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    width: 10vw;
     -webkit-box-shadow: 0px 0px 1vw -.1vw #000000; 
-box-shadow: 0px 0px 1vw -.1vw #000000;
+    box-shadow: 0px 0px 1vw -.1vw #000000;
     padding: .35vw;
+
+    cursor: pointer;
 }
 
-/* *:focus {  /* This removes the blue border from focus items, such as an active dropdown list */
-   /* outline: 0; */
+*:focus {  /* This removes the blue border from all active dropdown lists */
+    outline: 0; 
  }
 
 
@@ -155,13 +159,47 @@ select > option:hover {
 background-color: rgba(207, 207, 207, 0.6)!important;
 }
 
+
+/* First "clear all" button for dropdowns *************************************************/
+.btnReset1 {
+    margin-left: 46%;
+    margin-top: .3%;
+    cursor: pointer;
+}
+
+
+/* Cities Dropdown **************************************************************/
+#citiesDropdown {
+    position: absolute; /* prevents other items from moving when the list is dropped down */
+    margin-left: 23%;
+    border-radius: .5vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 13vw;
+    -webkit-box-shadow: 0px 0px 1vw -.1vw #000000; 
+    box-shadow: 0px 0px 1vw -.1vw #000000;
+    padding: .35vw;
+    cursor: pointer;
+}
+
+
+/* Second "clear all" button for dropdowns *************************************************/
+.btnReset2 {
+    cursor: pointer;
+    margin-left: 37%;
+    margin-top: .3%;
+}
+
+
+
+
+
+/* The table itself **********************************************************************/
 table {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5%;
- /*   border-collapse: separate; */
     border:solid black 1px;
-    border-spacing: 0; /* removed the white space between cells */
+    border-spacing: 0; /* removes the white space between cells */
     border-radius:1vw;
     -moz-border-radius:1vw;
     width: 80vw;
@@ -171,30 +209,6 @@ table {
 td, th {
     border-left:solid black 1px;
     border-top:solid black 1px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-td:first-child, th:first-child {
-     border-left: none;
-}
-th:first-child {
-            border-top-left-radius:.9vw;
-}
-
-th:last-child {
-        border-top-right-radius:.9vw;
 }
 
 td {
@@ -208,17 +222,30 @@ td {
 th {
     pointer-events: none;
     position: sticky;
-    top: 0%;
+    top: 171px;
     background-color: #0a5bb2;
     color: #ffffff;
     padding: 1vw;
     font-size: 1.3em;
     border-top: none;
-   /* z-index: -1; */
+}
+
+td:first-child, th:first-child {
+     border-left: none;
 }
 
 
-/* Color for every other row ********************************/
+/* Adds the rounded corners to the top-left/top-right of the table, to match the tab;e's rounded borders **************/
+th:first-child {
+            border-top-left-radius:.9vw;
+}
+
+th:last-child {
+        border-top-right-radius:.9vw;
+}
+
+
+/* The color showed on every other row, to help with organization ******************************/
 tr:nth-child(even) {
     background-color: rgba(92, 131, 178,.05);/*#F7F7F7*/;
     opacity: 1;
@@ -228,11 +255,18 @@ tr:nth-child(odd) {
     opacity: 1;
 }
 
-/* The Hover Color ******************************************/
+
+/* The table's hover Color *********************************************************************/
 tr:hover {
     background-color: rgba(207, 207, 207,0.4);
     color: #17b03b;
 }
+
+
+
+
+
+
 
 
 
@@ -259,6 +293,7 @@ tr:hover {
     border-bottom: 3px solid #0a5bb2;
     padding-top: .1vw;
     padding-bottom: .1vw;
+    height: 125px;
 }
     
 .logo{
@@ -285,6 +320,12 @@ tr:hover {
     width: 85vw;
 }   
     
+.topSearch {
+    position: sticky;
+    top: 0;
+    height: 100px;
+}
+
 input {
 border: rgba(255, 255, 255,1);
 }    
@@ -295,28 +336,48 @@ border: rgba(255, 255, 255,1);
 #specializationsDropdown {
     font-size: 2vw;
     width: 25vw;
-    margin-left: 25%;
+    margin-left: 24%;
+}
+
+.btnReset1 {
+    margin-left: 50%;
+    margin-bottom: 1%;
+    cursor: pointer;
 }
 
 #citiesDropdown {
     font-size: 2vw;
     width: 20vw;
-    margin-left: 70%;
+    margin-left: 10%;
+}
+    
+.btnReset2 {
+    cursor: pointer;
+    margin-left: 31%;
+    margin-top: .3%;
 }
     
 div.dropdown-menu.open{
     max-height: 1vw !important;
     overflow: hidden;
 }
+    
 ul.dropdown-menu.inner{
     max-height: 1vw !important;
     overflow-y: auto;
 }
     
     th {
-        font-size: .8em;
+        
     }
 
+    th {
+    pointer-events: none;
+    position: sticky;
+    top: 100px;
+    padding: 1vw;
+    font-size: .8em;
+}
 td {
     font-size: .7em;
     font-weight: bold;
