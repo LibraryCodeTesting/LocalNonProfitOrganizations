@@ -281,7 +281,8 @@ tr:hover {
 
 .topWords {
     /* border: 3px solid red; */
-    float: left;
+    float: none;
+    align-content: center;
     margin-left: 8vw;
     margin-top: .5vw;
     margin-right: 5vw;
@@ -294,26 +295,28 @@ tr:hover {
     padding-top: .1vw;
     padding-bottom: .1vw;
     height: 275px;
+    text-align: center;
 }
     
 .logo{
     width: 18%;
-    margin: 2vw;
     margin-top: 2%;
+    width: 30%;
+    margin-left: 10%;
+    
 }
 
 .top h1 {
-    font-size: 4.8vw;
+    font-size: 2em;
     margin-top: 5vw;
 }
 
 .top h2 {
-    font-size: 2.9vw;
-    font-weight: b0old;
+    font-size: 1.25em;
 }
 
 .top h3 {
-    font-size: 2.5vw;
+    font-size: 1em;
 }
     
     
@@ -386,14 +389,20 @@ td {
     
     
     #myBtn {
-
-  top: 6vw; 
-  left: 2vw; 
-  padding: 1%;
+  display: none; /* Hidden by default */
+  position: fixed; 
+  bottom: 6vw; 
+  right: 2vw; 
+  border: none; 
+  outline: none; 
+  background-color: #17b03b; 
+  color: #ffffff; 
+  cursor: pointer; 
+  padding: 1.5%;
   border-radius: 1vw; 
-  font-size: 2em; 
-  width: 8%;
-  height: 8%;
+  font-size: 1.75em; 
+  width: 80px;
+  height: 80px;
         z-index: 100;
 }
 
