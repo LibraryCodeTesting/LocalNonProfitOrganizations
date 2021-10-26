@@ -293,7 +293,7 @@ tr:hover {
     border-bottom: 3px solid #0a5bb2;
     padding-top: .1vw;
     padding-bottom: .1vw;
-    height: 125px;
+    height: 325px;
 }
     
 .logo{
@@ -323,7 +323,7 @@ tr:hover {
 .topSearch {
     position: sticky;
     top: 0;
-    height: 100px;
+    height: 200px;
 }
 
 .form-control {
@@ -368,14 +368,12 @@ ul.dropdown-menu.inner{
     overflow-y: auto;
 }
     
-    th {
-        
-    }
+
 
     th {
     pointer-events: none;
     position: sticky;
-    top: 100px;
+    top: 300px;
     padding: 1vw;
     font-size: .8em;
 }
