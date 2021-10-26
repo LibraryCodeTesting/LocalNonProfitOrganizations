@@ -326,7 +326,7 @@ tr:hover {
     height: 100px;
 }
 
-input {
+.form-control {
 border: rgba(255, 255, 255,1);
 }    
     
@@ -341,8 +341,9 @@ border: rgba(255, 255, 255,1);
 
 .btnReset1 {
     margin-left: 50%;
-    margin-bottom: 1%;
+    margin-bottom:1%;
     cursor: pointer;
+    height: 4.5vw;
 }
 
 #citiesDropdown {
@@ -354,7 +355,7 @@ border: rgba(255, 255, 255,1);
 .btnReset2 {
     cursor: pointer;
     margin-left: 31%;
-    margin-top: .3%;
+    height: 4.5vw;
 }
     
 div.dropdown-menu.open{
