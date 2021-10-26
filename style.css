@@ -139,7 +139,7 @@ body {
 #specializationsDropdown {
     position: absolute; /* prevents other items from moving when the list is dropped down */
     margin-left: 30%;
-    border-radius: .5vw;
+    border-radius: .4vw;
     border: 1px solid rgba(255, 255, 255, 0.2);
     width: 15vw;
     -webkit-box-shadow: 0px 0px 1vw -.1vw #000000; 
@@ -163,7 +163,7 @@ background-color: rgba(207, 207, 207, 0.6)!important;
 /* First "clear all" button for dropdowns *************************************************/
 .btnReset1 {
     margin-left: 46%;
-    margin-top: .3%;
+    margin-top: .5%;
     cursor: pointer;
 }
 
@@ -186,7 +186,7 @@ background-color: rgba(207, 207, 207, 0.6)!important;
 .btnReset2 {
     cursor: pointer;
     margin-left: 37%;
-    margin-top: .3%;
+    margin-top: .5%;
 }
 
 
@@ -293,7 +293,7 @@ tr:hover {
     border-bottom: 3px solid #0a5bb2;
     padding-top: .1vw;
     padding-bottom: .1vw;
-    height: 300px;
+    height: 275px;
 }
     
 .logo{
