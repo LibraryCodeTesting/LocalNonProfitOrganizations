@@ -6,8 +6,6 @@
   <link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
     
-    
-    
     <!-- For keyword made search -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -21,28 +19,25 @@
     <div class="bg"></div>
     
     
-    <div class="content">
-    
    <div class="top">
        <div class="topWords">
         <h1>Local Non-Profit Organizations</h1>
         <h2>Find needed support. Volunteer your time. Join a group.</h2>
-        <h3>Search through the database to find organizations of interest.</h3>
+        <h3>Search through the list to find organizations of interest.</h3>
        </div>
             <a href="https://www.monmouthcountylib.org/">
            <img src="MCL_Vector_Full.png" alt="Monmouth County Library Logo" class="logo">
        </a>
     </div> 
     
+<!-- <button onclick="topFunction2()" id="resetBtn" title="clear">Clear Filters</button> -->
 
-
-  <!-- <input type="text" id="name-filter" placeholder="Search through the list"></input> -->
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
       
 <div class="topSearch">
   <input class="form-control" id="myInput" type="text" placeholder="Type here to search">'
     
-<div class="dropdowns">
+
 <select id="specializationsDropdown" oninput="filterTable()">
 <option>All Specializations</option>
 <option>Accountants</option>
@@ -230,6 +225,9 @@
 <option>Youth Sports</option>
 </select>
       
+    
+<input type="button" class="btnReset1" id="btnReset" value="X" onclick="Reset();" />     
+    
 <select id="citiesDropdown" oninput="filterTable2()">
   <option>All Cities</option>
 <option>Allenhurst</option>
@@ -323,12 +321,14 @@
 <option>West Long Branch</option>
 <option>Woodbridge</option>
 </select>
-    </div>
+    
+    <input type="button" class="btnReset2" id="btnReset" value="X" onclick="Reset();" />    
     
     </div>
+    
         
   <table>  
-    <tr id="col-names">
+    <tr>
       <th class="header">Name</th>
       <th class="header">Specializations</th>
       <th class="header">Phone</th>
@@ -1995,7 +1995,7 @@ Extension 42</td>
 </tr>
 <tr>
 <td><a href="https://www.adoptahorse.org/copy-of-about-srf-the-breed">Standardbred Retirement Foundation</a></td>
-<td>Animal Sanctuary<br>Animals<br>Horses</td>
+<td>Animal Sanctuaries<br>Animals<br>Horses</td>
 <td>609-738-3255</td>
 <td>42 Arneytown-Hornerstown Road<br>Cream Ridge, NJ<br>08514</td>
 </tr>
@@ -2224,9 +2224,6 @@ Extension 5117</td>
           </tbody>
   </table>
         
-
-    
-    </div>
 
 <!-- For Keyword Searching -->
   <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
