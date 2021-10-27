@@ -386,7 +386,7 @@ td {
     #myBtn {
   display: none; /* Hidden by default */
   position: fixed; 
-  bottom: 6vw; 
+  bottom: 10vw; 
   right: 2vw; 
   border: none; 
   outline: none; 
@@ -395,9 +395,9 @@ td {
   cursor: pointer; 
   padding: 1.5%;
   border-radius: 1vw; 
-  font-size: 1.75em; 
-  width: 120px;
-  height: 120px;
+  font-size: 2em; 
+  width: 150px;
+  height: 150px;
         z-index: 100;
 }
 
