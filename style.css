@@ -281,11 +281,10 @@ tr:hover {
 
 .topWords {
     /* border: 3px solid red; */
-    float: none;
-    align-content: center;
-    margin-left: 8vw;
+    float: left;
+    margin-left: 11vw;
     margin-top: .5vw;
-    margin-right: 5vw;
+
 }
     
 .top {
@@ -294,29 +293,26 @@ tr:hover {
     border-bottom: 3px solid #0a5bb2;
     padding-top: .1vw;
     padding-bottom: .1vw;
-    height: 275px;
-
+    height: 300px;
 }
     
 .logo{
     width: 18%;
+    margin: 2vw;
     margin-top: 2%;
-    width: 30%;
-    margin-left: 10%;
-    
 }
 
 .top h1 {
-    font-size: 2em;
+    font-size: 3em;
     margin-top: 5vw;
 }
 
 .top h2 {
-    font-size: 1.25em;
+    font-size: 2.9vw;
 }
 
 .top h3 {
-    font-size: 1em;
+    font-size: 2.5vw;
 }
     
     
