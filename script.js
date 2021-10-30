@@ -175,11 +175,10 @@ var element = document.getElementById("citiesDropdown");
 
     mybutton = document.getElementById("myBtn");
 
-    // Shows the button after users scroll 20px
     window.onscroll = function() {scrollFunction()};
 
     function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         mybutton.style.display = "block";
       } 
       else {
@@ -188,10 +187,26 @@ var element = document.getElementById("citiesDropdown");
     }
 
     // Returns users to the top upon clicking
-    function topFunction() {
-      document.body.scrollTop = 0; // Safari
-      document.documentElement.scrollTop = 0; // Chrome, Firefox, IE and Opera
-    }
+
+
+//    document.getElementById("myBtn").addEventListener("click", topFunction);
+
+//    function topFunction() {
+ //     document.body.scrollTop = 0; // Safari
+ //     document.documentElement.scrollTop = 0; // Chrome, Firefox, IE and Opera
+ //   }
+
+
+
+const btn = document.getElementById("myBtn");
+
+function topFunction(event){
+  document.body.scrollTop = 0; // Safari
+  document.documentElement.scrollTop = 0; // Chrome, Firefox, IE and Opera
+}
+
+btn.addEventListener('touchstart', topFunction);
+btn.addEventListener('click', topFunction);
 
 
 
