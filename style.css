@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 /* Narrow font */ 
 
@@ -35,7 +34,7 @@ body {
 
 .top {
     overflow: hidden;  /* removes the white space on top of the page */
-    background-color: rgba(255, 255, 255,1);
+    background-color: /* #f9f9f9ff */ /* #f2f2f2ff */ #f5f9ffff;
     border-bottom: 3px solid #0a5bb2;
     height: 200px;
 }
@@ -97,7 +96,7 @@ body {
 
 #myBtn:hover {
   background-color: #555555; 
-}
+} 
 
 
 
@@ -145,13 +144,15 @@ body {
     -webkit-box-shadow: 0px 0px 1vw -.1vw #000000; 
     box-shadow: 0px 0px 1vw -.1vw #000000;
     padding: .35vw;
-
     cursor: pointer;
+    -webkit-appearance: menulist;
 }
 
 *:focus {  /* This removes the blue border from all active dropdown lists */
     outline: 0; 
  }
+
+
 
 
 /* Hover color within dropdown menus *************************************************/
@@ -163,7 +164,7 @@ background-color: rgba(207, 207, 207, 0.6)!important;
 /* First "clear all" button for dropdowns *************************************************/
 .btnReset1 {
     margin-left: 46%;
-    margin-top: .5%;
+    margin-top: .3%;
     cursor: pointer;
 }
 
@@ -179,6 +180,7 @@ background-color: rgba(207, 207, 207, 0.6)!important;
     box-shadow: 0px 0px 1vw -.1vw #000000;
     padding: .35vw;
     cursor: pointer;
+    -webkit-appearance: menulist;
 }
 
 
@@ -186,7 +188,7 @@ background-color: rgba(207, 207, 207, 0.6)!important;
 .btnReset2 {
     cursor: pointer;
     margin-left: 37%;
-    margin-top: .5%;
+    margin-top: .3%;
 }
 
 
@@ -278,8 +280,9 @@ tr:hover {
 
 /* Smaller Screens ********************************/
 
-/* Added hover none */
-@media screen and (max-width: 1150px) (hover: none) {
+
+
+@media screen and (max-width: 1150px) and (hover: none) {
 
 .topWords {
     /* border: 3px solid red; */
@@ -296,6 +299,7 @@ tr:hover {
     padding-top: .1vw;
     padding-bottom: .1vw;
     height: 300px;
+    margin-top: 5%;
 }
     
 .logo{
@@ -337,31 +341,34 @@ border: rgba(255, 255, 255,1);
     font-size: 2vw;
     width: 25vw;
     margin-left: 24%;
+    height: 25%;
+    border: 1px solid #dddddd;
 }
 
     /* added this */
     #btnReset{
-      -webkit-appearance: none;
-  border-radius: 0;
+  border-radius: .9vw;
+        margin-top: .7%;
     }
 
 .btnReset1 {
     margin-left: 50%;
-    margin-bottom:1%;
     cursor: pointer;
-    height: 4.5vw;
+    height: 4vw;
 }
 
 #citiesDropdown {
     font-size: 2vw;
     width: 20vw;
-    margin-left: 10%;
+    margin-left: 13%;
+    height: 25%;
+    border: 1px solid #dddddd;
 }
     
 .btnReset2 {
     cursor: pointer;
-    margin-left: 31%;
-    height: 4.5vw;
+    margin-left: 34%;
+    height: 4vw;
 }
     
 div.dropdown-menu.open{
@@ -379,7 +386,7 @@ th {
     position: sticky;
     top: 200px;
     padding: 1vw;
-    font-size: .8em;
+    font-size: 1.25em;
 }
     
 td {
@@ -391,11 +398,13 @@ td {
 }
     
     
-    #myBtn {
+ #myBtn {
   display: none; /* Hidden by default */
-  position: fixed; 
-  bottom: 10vw; 
-  right: 6vw; 
+  position:relative; 
+margin-left: 10%;
+        margin-top: -10%;
+ /* bottom: 10vw; */
+ /* right: 6vw; */
   border: none; 
   outline: none; 
   background-color: #17b03b; 
@@ -404,14 +413,13 @@ td {
   padding: 1.5%;
   border-radius: 1vw; 
   font-size: 2em; 
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
         z-index: 100;
 }
 
-#myBtn:hover {
-  background-color: #555555; 
-}
+
+
     
     
   .form-control {
@@ -426,12 +434,10 @@ td {
     margin-right: auto;
     display: flex; /* Keeps the text input centered */
     padding: .5vw;
-    -webkit-box-shadow: 0px 0px 0 .7vw rgba(228, 228, 228); 
-    box-shadow: 0 0 0 .7vw rgba(228, 228, 228); 
+
     margin-bottom: 4%;
 }  
     
     
     
 }
-
