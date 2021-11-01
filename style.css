@@ -94,7 +94,9 @@ body {
   width: 6%;
 }
 
-
+#myBtn:hover {
+  background-color: #555555; 
+} 
 
 
 
@@ -153,6 +155,10 @@ body {
 
 
 
+/* Hover color within dropdown menus *************************************************/
+select > option:hover {
+background-color: rgba(207, 207, 207, 0.6)!important;
+}
 
 
 /* First "clear all" button for dropdowns *************************************************/
@@ -252,7 +258,11 @@ tr:nth-child(odd) {
 }
 
 
-
+/* The table's hover Color *********************************************************************/
+tr:hover {
+    background-color: rgba(207, 207, 207,0.4);
+    color: #17b03b;
+}
 
 
 
@@ -272,7 +282,7 @@ tr:nth-child(odd) {
 
 
 
-@media screen and (max-width: 1150px) and {
+@media screen and (max-width: 1150px) and (hover: none) {
 
 .topWords {
     /* border: 3px solid red; */
