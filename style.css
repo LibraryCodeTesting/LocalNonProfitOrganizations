@@ -294,7 +294,6 @@ tr:hover {
     
 .top {
     overflow: hidden;  /* removes the white space on top of the page */
-    background-color: rgba(255, 255, 255,1);
     border-bottom: 3px solid #0a5bb2;
     padding-top: .1vw;
     padding-bottom: .1vw;
