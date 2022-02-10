@@ -40,7 +40,7 @@ body {
 }
     
 .topWords {
-    float: left;
+   /* float: left; */
     margin-left: auto;
     margin-right: auto;
     /* margin-left: 25vs; */
@@ -54,14 +54,14 @@ body {
 }
 
 .top h1 {
-    font-size: 30px;
+    font-size: 35px;
     color: #fb3e09;
     font-family: 'Roboto Condensed', sans-serif;
     margin-bottom: -5px;
 }
 
 .top h2 {
-    font-size: 20px;
+    font-size: 25px;
     color: #0a5bb2;
     font-family: 'Roboto Condensed', sans-serif;
     letter-spacing: -.05px;
@@ -69,7 +69,7 @@ body {
 }
 
 .top h3 {
-    font-size: 15px;
+    font-size: 20px;
     color: #0a5bb2;
     font-family: 'Roboto Condensed', sans-serif;
 }
