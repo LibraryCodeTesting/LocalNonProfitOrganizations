@@ -46,9 +46,9 @@ body {
 }
 
 .logo{
-    width: 150px;
+    width: 125px;
     padding: 25px;
-    margin-right: 8vw;
+    margin-right: 25px;
 }
 
 .top h1 {
@@ -62,7 +62,7 @@ body {
     font-size: 20px;
     color: #0a5bb2;
     font-family: 'Roboto Condensed', sans-serif;
-    letter-spacing: -.08vw;
+    letter-spacing: -.05px;
     font-weight: 100;
 }
 
