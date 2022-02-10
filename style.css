@@ -52,14 +52,14 @@ body {
 }
 
 .top h1 {
-    font-size: 3vw;
+    font-size: 30px;
     color: #fb3e09;
     font-family: 'Roboto Condensed', sans-serif;
     margin-bottom: -.4vw;
 }
 
 .top h2 {
-    font-size: 2vw;
+    font-size: 20px;
     color: #0a5bb2;
     font-family: 'Roboto Condensed', sans-serif;
     letter-spacing: -.08vw;
