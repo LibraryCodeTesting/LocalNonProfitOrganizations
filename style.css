@@ -111,7 +111,7 @@ body {
     height: 175px;
     z-index: 99; /* Keeps the white background above the table during sticky scrolling */
     border: 1px solid rgba(255, 255, 255, 0); /*This makes the white BG spread to all parts, if a background is ever added here, and also keeps the sticky where it should be*/
-    margin-bottom: 1%;
+    margin-bottom: 10%;
 }
 
 
@@ -137,7 +137,6 @@ body {
 /* Specializations Dropdown **************************************************************/
 #specializationsDropdown {
     position: absolute; /* prevents other items from moving when the list is dropped down */
-    margin-bottom: 10%;
     margin-left: 30%;
     border-radius: .4vw;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -200,7 +199,6 @@ background-color: rgba(207, 207, 207, 0.6)!important;
 table {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
     margin-bottom: 5%;
     border:solid black 1px;
     border-spacing: 0; /* removes the white space between cells */
