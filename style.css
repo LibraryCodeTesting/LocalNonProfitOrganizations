@@ -41,7 +41,9 @@ body {
     
 .topWords {
     float: left;
-    margin-left: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-left: 25vs; */
     margin-top: .5vw;
 }
 
