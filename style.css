@@ -224,7 +224,7 @@ td {
 th {
     pointer-events: none;
     position: sticky;
-    top: 189px; /* 171 px */
+    top: 195px; /* 171 px */
     background-color: #0a5bb2;
     color: #ffffff;
     padding: 1vw;
