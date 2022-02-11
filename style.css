@@ -308,7 +308,7 @@ tr:hover {
 }
 
 .top h1 {
-    font-size: 3em;
+    font-size: 20px; /* 3 em */
     margin-top: 5vw;
 }
 
