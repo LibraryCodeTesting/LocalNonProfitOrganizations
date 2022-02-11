@@ -108,7 +108,7 @@ body {
     position: sticky;
     top: 0;
     background-color: #ffffff;
-    height: 175px;
+    height: 200px;   /* 175px */
     z-index: 99; /* Keeps the white background above the table during sticky scrolling */
     border: 1px solid rgba(255, 255, 255, 0); /*This makes the white BG spread to all parts, if a background is ever added here, and also keeps the sticky where it should be*/
     margin-bottom: 1%;
