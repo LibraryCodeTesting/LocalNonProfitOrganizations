@@ -302,22 +302,22 @@ tr:hover {
 }
     
 .logo{
-    width: 18%;
+  /*  width: 18%; */
     margin: 2vw;
     margin-top: 2%;
 }
 
 .top h1 {
-    font-size: 30px; /* 3 em */
+   /* font-size: 35px; */ /* 3 em */
     margin-top: 5vw;
 }
 
 .top h2 {
-    font-size: 20px; /* 2.9vw */
+   /* font-size: 20px; */ /* 2.9vw */
 }
 
 .top h3 {
-    font-size: 25px; /* 2.5vw */
+  /*  font-size: 25px; */ /* 2.5vw */
 }
     
     
