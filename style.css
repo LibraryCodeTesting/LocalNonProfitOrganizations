@@ -40,7 +40,7 @@ body {
 }
     
 .topWords {
-   float: left;
+    float: left;
     margin-left: 25vw;
     margin-top: .5vw;
 }
@@ -308,16 +308,16 @@ tr:hover {
 }
 
 .top h1 {
-   /* font-size: 35px; */ /* 3 em */
+    font-size: 40px; /* 3 em */
     margin-top: 5vw;
 }
 
 .top h2 {
-   /* font-size: 20px; */ /* 2.9vw */
+    font-size: 30px; /* 2.9vw */
 }
 
 .top h3 {
-  /*  font-size: 25px; */ /* 2.5vw */
+    font-size: 25px; /* 2.5vw */
 }
     
     
