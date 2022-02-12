@@ -303,6 +303,7 @@ tr:hover {
     
 .logo{
   /*  width: 18%; */
+    width: 200px;
     margin: 2vw;
     margin-top: 2%;
 }
