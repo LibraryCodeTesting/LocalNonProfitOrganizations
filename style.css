@@ -32,6 +32,12 @@ body {
 
 /* Top contents ******************************************************************/
 
+/*.allTheTopSticking {
+    z-index: 99;
+    top: 0;
+    position: sticky;
+}*/
+
 .top {
     overflow: hidden;  /* removes the white space on top of the page */
     background-color: /* #f9f9f9ff */ /* #f2f2f2ff */ #f5f9ffff;
@@ -109,9 +115,9 @@ body {
     top: 0;
     background-color: #ffffff;
     height: 200px;   /* 175px */
-    z-index: 99; /* Keeps the white background above the table during sticky scrolling */
+   z-index: 99; /* Keeps the white background above the table during sticky scrolling */
     border: 1px solid rgba(255, 255, 255, 0); /*This makes the white BG spread to all parts, if a background is ever added here, and also keeps the sticky where it should be*/
-    margin-bottom: 1%;
+    margin-bottom: 10px/*1%*/;
 }
 
 
@@ -121,7 +127,7 @@ body {
     border-radius: .5vw;
     width: 50vw;   
     font-size: 150%;
-    margin-top: 3vw;
+    margin-top: 45px/*3vw*/;
     outline: 0;
     font-weight: 900;
     margin-left: auto;
@@ -130,7 +136,7 @@ body {
     padding: .5vw;
     -webkit-box-shadow: 0px 0px 0 .7vw rgba(228, 228, 228); 
     box-shadow: 0 0 0 .7vw rgba(228, 228, 228); 
-    margin-bottom: 4%;
+    margin-bottom: 50px/*4%*/;
 }
 
 
