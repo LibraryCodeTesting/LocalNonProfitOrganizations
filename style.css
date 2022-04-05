@@ -32,11 +32,6 @@ body {
 
 /* Top contents ******************************************************************/
 
-/*.allTheTopSticking {
-    z-index: 99;
-    top: 0;
-    position: sticky;
-}*/
 
 .top {
     overflow: hidden;  /* removes the white space on top of the page */
@@ -132,11 +127,11 @@ body {
     font-weight: 900;
     margin-left: auto;
     margin-right: auto;
-    display: flex; /* Keeps the text input centered */
+    display: flex; /* Keeps the text input box centered */
     padding: .5vw;
     -webkit-box-shadow: 0px 0px 0 .7vw rgba(228, 228, 228); 
     box-shadow: 0 0 0 .7vw rgba(228, 228, 228); 
-    margin-bottom: 50px/*4%*/;
+    margin-bottom: 30px/*4%*/;
 }
 
 
@@ -170,7 +165,7 @@ background-color: rgba(207, 207, 207, 0.6)!important;
 /* First "clear all" button for dropdowns *************************************************/
 .btnReset1 {
     margin-left: 46%;
-    margin-top: .3%;
+    margin-top: 0px/*.3%*/;
     cursor: pointer;
 }
 
