@@ -1,738 +1,442 @@
-* {
-	margin:0;
-	padding:0;
-	box-sizing: border-box;
-    
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+/* Narrow font */ 
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap'); /* Bold Font */
 
 
 body {
-  /* background-color:#fff; */
- /* color:#4d4c59; */
-  font-family: "PT Serif",Georgia,Cambria,"Times New Roman",Times,serif;
-    color: #ffffff;
-        text-align: center;
-    background-color: hsla(230,40%,50%,1);
+    overflow-x: hidden;
+    height: 100%;
+    font-family: "Lato", sans-serif;
 }
 
 
 
 
 
+/* If a background is added, then unblock this code, to keep it stagnant behind the rest of the page *******************************************************************************/
 
-
-
-
-  body:before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 0;
-    }
-
-
-.celebrating {
-    width: 800px;
-    /* border-top: 2px solid white; */
-    margin-left: 25%;
-    position: relative;  /* makes shadows not move */
-    margin-top: 75px;
-    margin-bottom: 1300px;
-}
-
-.logo {
-    opacity: 0.13;
-    position: absolute;
-    top: -15%;
-    left: 3%;
-    
-}
-
-h2, h4 {
-    margin-top: 50px;
-  display: inline-block;
-  color: white;
-  font-family: 'Righteous', serif;
-  font-size: 10em; 
-  text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
-  }
-
-
-
-  h2:after {
-      margin-top: 50px;
-    content: attr(data-shadow);
-    position: absolute;
-    top: .06em; left: 38px;
-    z-index: -1;
-    text-shadow: none;
-    background-image:
-      linear-gradient(
-        45deg,
-        transparent 45%,
-        hsla(48,20%,90%,1) 45%,
-        hsla(48,20%,90%,1) 55%,
-        transparent 0
-        );
-    background-size: .05em .05em;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  
-    animation: shad-anim 15s linear infinite;
-    }
-
-
-  h4:after {
-    content: attr(data-shadow2);
-    position: absolute;
-    top: 1.95em; left: 78px;
-    z-index: -1;
-    text-shadow: none;
-    background-image:
-      linear-gradient(
-        45deg,
-        transparent 45%,
-        hsla(48,20%,90%,1) 45%,
-        hsla(48,20%,90%,1) 55%,
-        transparent 0
-        );
-    background-size: .05em .05em;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  
-    animation: shad-anim 15s linear infinite;
-    }
-
-@keyframes shad-anim {
-  0% {background-position: 0 0}
-  0% {background-position: 100% -100%}
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-:root {
-   --background-color: #222;
-   --color-start: #ffffff;
-   --color-end: #b6c2fa;
-   --gradient: linear-gradient(
-                 90deg, 
-                 var(--color-start), 
-                 var(--color-end)
-               ); 
-}
-
-
-
-.wrapper2 {
-  color: var(--color-start);
-  font-family: 'Lato', sans-serif;
-    position: absolute;
-  margin-top: 400px;
-  padding: 30px;
-  width: 800px;
-    left: 30px;
-    font-size: 17px;
-}
-
-.border-glow {
-  box-shadow: 0 0 2rem 0 var(--color-end);
-}
-
-.text-glow {
-  text-shadow: 0 0 0.5rem var(--color-end);
-}
-
-.border-gradient {
-  background: linear-gradient(#222, #222), 
-              var(--gradient);
-  background-origin: padding-box, border-box;
-  background-repeat: no-repeat; /* this is important */
-  border: 0.2rem solid transparent;
-  border-radius: 5px;
-}
-
-.text-gradient {
-  background-image: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: none;
-    text-align: justify;
-}
-
-#glowSubtitle {
-    margin-top: -8px;
-}
-
-
-
-
-
-h1 {
-    text-shadow: 0px 0px 50px rgba(0,0,0,1);
-}
-
-
-h3{
-	    font-family: 'Lato', sans-serif;
-}
-
-p {
-        font-family: 'Lato', sans-serif;
-    text-align: left;
-}
-
-
-
-
-
-/* Navigation Menu on the left******************************************/
-
-
-.wrapper {    /* Where is the end?????????????*/
-  font-family: 'Roboto Slab', serif;
-  font-weight: 100;
-  color: #fff;
-  position: relative;   
-top:-8700px;
-}
-
-
-
-
-.nav__wrapper {
-    z-index: 1;
+/* .bg {
+    background: #ffffff; 
+    background-repeat: no-repeat; /* prevents baclground from moving as it filters */
+ /*   background-position: center;
+    height: 100vh;
+    width: 100vw;
     position: fixed;
-    padding-left: 4%;
-    top: 0%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-end;
-    z-index: 100;
-}
-
-
-.nav {
-  margin: 0 0 100px 30px;  /* ALIGNS EVERYTHING */
-}
-
-
-.nav__counter {
-  font-size: 18px;
-    font-weight: 800;
-    text-shadow: 0px 0px 15px rgba(0,0,0,1);
-    -webkit-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
-}
-
-.nav__counter__chapter {
-    height: 0px;                /* moved the lines width*/
-    overflow: hidden;
-
-}
-.nav__title {
-    font-weight: 300;
-    margin-top: 1px;            /* moved the lines width*/
-    height: 0px;                /* moved the lines width*/
-    overflow: hidden;
-    opacity: 0;
-    transition: height 0.3s ease-out, opacity 0.2s ease-out;
-}
-
-
-/*.nav__body {
-    overflow: hidden;
+    z-index: -1; 
 } */
 
-.nav__body {
+
+
+
+
+/* Top contents ******************************************************************/
+
+
+.top {
+    overflow: hidden;  /* removes the white space on top of the page */
+    background-color: /* #f9f9f9ff */ /* #f2f2f2ff */ #f5f9ffff;
+    border-bottom: 3px solid #0a5bb2;
+    height: 200px;
+}
+    
+.topWords {
+    float: left;
+    margin-left: 25vw;
+    margin-top: .5vw;
+}
+
+.logo{
+    width: 150px;
+    padding: 25px;
+    margin-right: 25px;
+}
+
+.top h1 {
+    font-size: 35px;
+    color: #fb3e09;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: -5px;
+}
+
+.top h2 {
+    font-size: 25px;
+    color: #0a5bb2;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: -.05px;
     font-weight: 100;
-    font-size: 15px;    /* expanded paragraph descriptive info */
-    font-weight: 700;
-    text-shadow: 0px 0px 10px rgba(0,0,0,1);
-    width: 200px;
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease-out, opacity 0.2s ease-out;
-
-    
 }
 
-.nav li {
-    position: relative;
-    transition: all 0.3s ease-out;
-    margin-bottom: 1em;
-    border: 0px solid black;
-    background-color: rgba(33, 33, 33, 0);
-    max-width: 160px; 
-    min-width: 100px;
-    padding: 0%;  
-    -webkit-box-shadow: -1px 1px 50px 10px rgba(0,0,0,0); 
-    box-shadow: -1px 1px 50px 10px rgba(0,0,0,);
-
+.top h3 {
+    font-size: 20px;
+    color: #0a5bb2;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 
 
 
-/***** MOVES LINE CLOSER ********/
 
+/* "Top" button to return to top of page ****************************************************/
 
-.nav li:after {
-  content: "";              /* makes the lines disappear */
-  display: block;
-  border-left: 2px solid white;
-  border-top: 2px solid white;
-  height: 250px;            /*Line height*/
-  width: 20px;              /* Line width */
-  position: absolute;
-  left: -30px;              /* move the chapter more right */
-  top: 15px;                /* move ONLY lines up and down */
-
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  bottom: 2vw; 
+  right: 2vw; 
+  border: none; 
+  outline: none; 
+  background-color: #17b03b; 
+  color: #ffffff; 
+  cursor: pointer; 
+  padding: 1.5%;
+  border-radius: 1vw; 
+  font-size: 1.75vw; 
+  width: 6%;
 }
 
-/***smoother transition */
-.nav li a {
-  display: block;
-  padding: 0;
-  color: #fff;
-  transition: all 0.15s ease-out;
-}
+#myBtn:hover {
+  background-color: #555555; 
+} 
 
 
-.nav li a:hover {
-    background-color: transparent;
-    padding-left: 1em;          /* how far right the number goes on a hover */
-}
-.nav li a:focus {
-    background-color: transparent;      /* background behind clicked-on chapter */
-}
 
 
-/* background when active ***/
-.nav li.active {
 
-    pointer-events: none;
-    padding-left: 10px;          /* how far the details are to the right when clicked on */
-}
-.nav li.active:after {
-    width: 4vw;                 /*length of line coming out when clicked on */ 
-    height: 300px;
-   
-}
-.nav li.active .nav__counter {
-    font-size: 50px; /* clicked on chapter number size */
-}
+/* Div holding all search contents - text search, dropdowns, and filter reset buttons *******/
 
-.nav li.active .nav__counter__chapter {
-    font-size: 1.5vw;           /* "chapter" word size, clicked on */
-    font-weight: bold;
-    margin-bottom: 1vm;         /* distance above chapter number when clicked on */
-    overflow: visible;
-}
-.nav li.active .nav__title {
-    width: 4vw;                 /* chapter detail paragraph widths when clicked on */
-    margin-left: 3vw;
-    overflow: visible;
-    font-size: 1.8vw;
-}
-
-.nav li.active .nav__body {
-  height: 100px;
-  opacity: 1;
-  overflow: visible;
+.topSearch {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    height: 200px;   /* 175px */
+   z-index: 99; /* Keeps the white background above the table during sticky scrolling */
+    border: 1px solid rgba(255, 255, 255, 0); /*This makes the white BG spread to all parts, if a background is ever added here, and also keeps the sticky where it should be*/
+    margin-bottom: 20px/*1%*/;
 }
 
 
+/* Text input search bar **************************************************************/
+.form-control {
+    border: 0; /* removes default text input border */
+    border-radius: .5vw;
+    width: 50vw;   
+    font-size: 150%;
+    margin-top: 45px/*3vw*/;
+    outline: 0;
+    font-weight: 900;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; /* Keeps the text input box centered */
+    padding: .5vw;
+    -webkit-box-shadow: 0px 0px 0 .7vw rgba(228, 228, 228); 
+    box-shadow: 0 0 0 .7vw rgba(228, 228, 228); 
+    margin-bottom: 50px/*4%*/;
+}
 
-#clock {
-    margin: 200px;
-    padding: 200px;
-    
+
+/* Specializations Dropdown **************************************************************/
+#specializationsDropdown {
+    position: absolute; /* prevents other items from moving when the list is dropped down */
+    margin-left: 30%;
+    border-radius: .4vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 15vw;
+    -webkit-box-shadow: 0px 0px 1vw -.1vw #000000; 
+    box-shadow: 0px 0px 1vw -.1vw #000000;
+    padding: .35vw;
+    cursor: pointer;
+    -webkit-appearance: menulist;
+}
+
+*:focus {  /* This removes the blue border from all active dropdown lists */
+    outline: 0; 
+ }
+
+
+
+
+/* Hover color within dropdown menus *************************************************/
+select > option:hover {
+background-color: rgba(207, 207, 207, 0.6)!important;
+}
+
+
+/* First "clear all" button for dropdowns *************************************************/
+.btnReset1 {
+    margin-left: 46%;
+    margin-top: 0px/*.3%*/;
+    cursor: pointer;
+}
+
+
+/* Cities Dropdown **************************************************************/
+#citiesDropdown {
+    position: absolute; /* prevents other items from moving when the list is dropped down */
+    margin-left: 23%;
+    border-radius: .5vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 13vw;
+    -webkit-box-shadow: 0px 0px 1vw -.1vw #000000; 
+    box-shadow: 0px 0px 1vw -.1vw #000000;
+    padding: .35vw;
+    cursor: pointer;
+    -webkit-appearance: menulist;
+}
+
+
+/* Second "clear all" button for dropdowns *************************************************/
+.btnReset2 {
+    cursor: pointer;
+    margin-left: 37%;
+    margin-top: .3%;
 }
 
 
 
-.timelineAndContent {
-    margin-top: 500px;
+
+
+/* The table itself **********************************************************************/
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    border:solid black 1px;
+    border-spacing: 0; /* removes the white space between cells */
+    border-radius:1vw;
+    -moz-border-radius:1vw;
+    width: 80vw;
+    table-layout: fixed;  /* Keeps the table the same width */
 }
 
+td, th {
+    border-left:solid black 1px;
+    border-top:solid black 1px;
+}
 
-
-
-.section {
-    background-color: #1c1c1c;
-    background-image: url(books.jpg);
-    back
+td {
+    padding: 1.2vw;
     text-align: center;
-    z-index: 99;
-    position: absolute;
-    width: 100%;
-    border-top: 10px solid #000000;
-    border-bottom: 10px solid #000000;
-    height: 200px;   /* this and line-height make font centered */
-    padding-top: 2.75%;
+    margin-left: 1vw;
+    font-family: "verdana", serif;
+    font-size: 1em;
 }
 
-#twentiesSection {
-    font-size: 5em;
-    font-family: 'Limelight', cursive;
-}
-.twentiesYear {
-    font-size: 4em !important;
-    font-family: 'Limelight', cursive;
-    text-shadow: 0px 0px 15px rgba(0,0,0,1);
-    margin: 0px;
-}
-
-#thirtiesSection {
-    font-size: 5em;
-    font-family: 'Poiret One', cursive;
-}
-.thirtiesYear {
-    font-size: 3em !important;
-        font-family: 'Poiret One', cursive;
-    text-shadow: 0px 0px 15px rgba(0,0,0,1);
-    margin: 0px;
+th {
+    pointer-events: none;
+    position: sticky;
+    top: 195px; /* 171 px */
+    background-color: #0a5bb2;
+    color: #ffffff;
+    padding: 1vw;
+    font-size: 1.3em;
+    border-top: none;
 }
 
-#fourtiesSection {
-    font-size: 5em;
-    font-family: 'Oooh Baby', cursive;
-}
-.fourtiesYear {
-    font-size: 4em !important;
-    font-family: 'Oooh Baby', cursive;
-    text-shadow: 0px 0px 15px rgba(0,0,0,1);
-    margin: 0px;
+td:first-child, th:first-child {
+     border-left: none;
 }
 
-#fiftiesSection {
-    font-size: 5em;
-    font-family: 'Slackey', cursive;
+
+/* Adds the rounded corners to the top-left/top-right of the table, to match the tab;e's rounded borders **************/
+th:first-child {
+            border-top-left-radius:.9vw;
 }
 
-.fiftiesYear {
-    font-size: 3em !important;
-    font-family: 'Slackey', cursive;
-    text-shadow: 0px 0px 15px rgba(0,0,0,1);
-    margin: 0px;
+th:last-child {
+        border-top-right-radius:.9vw;
 }
 
-#sixtiesSection {
-    font-size: 5em;
-    font-family: 'Chicle', cursive;
+
+/* The color showed on every other row, to help with organization ******************************/
+tr:nth-child(even) {
+    background-color: rgba(92, 131, 178,.05);/*#F7F7F7*/;
+    opacity: 1;
+}
+tr:nth-child(odd) {
+    background-color: rgba(0,0,255,0);/*#E0E0E0*/;
+    opacity: 1;
 }
 
-.sixtiesYear {
-    font-size: 4em !important;
-    font-family: 'Chicle', cursive;
-    text-shadow: 0px 0px 15px rgba(0,0,0,1);
-    margin: 0px;
-}
 
-#seventiesSection {
-    font-size: 5em;
-    font-family: 'Monoton', cursive;
-}
-
-.seventiesYear {
-    font-size: 3em !important;
-    font-family: 'Monoton', cursive;
-    text-shadow: 0px 0px 15px rgba(0,0,0,1);
-    margin: 0px;
-}
-
-#eightiesSection {
-    font-size: 5em;
-    font-family: 'Press Start 2P', cursive;
-}
-
-.eightiesYear {
-    font-size: 2.5em !important;
-    font-family: 'Press Start 2P', cursive;
-    text-shadow: 0px 0px 15px rgba(0,0,0,1);
-    margin: 0px;
-}
-
-#ninetiesSection {
-    font-size: 5em;
-    font-family: 'Loved by the King', cursive;
-}
-
-.ninetiesYear {
-    font-size: 4em !important;
-    font-family: 'Loved by the King', cursive;
-    text-shadow: 0px 0px 15px rgba(0,0,0,1);
-    margin: 0px;
-}
-
-#twoThousandsSection {
-    font-size: 5em;
-    font-family: 'Rampart One', cursive;
-}
-
-.twoThousandsYear {
-    font-size: 4em !important;
-    font-family: 'Rampart One', cursive;
-    text-shadow: 0px 0px 15px rgba(0,0,0,1);
-    margin: 0px;
-}
-
-#twentyTensSection {
-    font-size: 5em;
-    font-family: 'Short Stack', cursive;
-}
-
-.twentyTensYear {
-    font-size: 3em !important;
-    font-family: 'Short Stack', cursive;
-    text-shadow: 0px 0px 15px rgba(0,0,0,1);
-    margin: 0px;
-}
-
-#twentyTwentiesSection {
-    font-size: 5em;
-    font-family: 'Short Stack', cursive;
+/* The table's hover Color *********************************************************************/
+tr:hover {
+    background-color: rgba(207, 207, 207,0.4);
+    color: #17b03b;
 }
 
 
 
-.container {
- /*   border-top: 5px solid white; */
-/*	width:100vw; */
-    margin-top: -5000px;
+
+
+
+
+
+
+
+
+
+
+
+
+/* Smaller Screens ********************************/
+
+
+
+@media screen and (max-width: 1150px) {
+
+.topWords {
+    /* border: 3px solid red; */
+    float: left;
+    margin-left: 10vw;
+    margin-top: 3em;
+
+}
+    
+.top {
+    overflow: hidden;  /* removes the white space on top of the page */
+    border-bottom: 3px solid #0a5bb2;
+    padding-top: .1vw;
+    padding-bottom: .1vw;
+    height: 300px;
+    padding-top: 5%;
+}
+    
+.logo{
+    width: 18%; 
+   /* width: 160px; */
+    margin: 2vw;
+    margin-top: 2%;
 }
 
-
-
-li {
-    border: 5px solid black;
-    background-color: rgba(33, 33, 33, .8);
-   /* max-height: 35vw; */
-    max-width: 900px; 
-    min-width: 400px;
- /*   overflow-y: auto;  */
- /*   text-indent: 2vw; */
-  /*  text-align: justify; */
-  /*  float: right;
-   /* margin-left: 3vw;            /* moves maps */
-   /* margin-right: 12%;          /* moves word box groups from the right */
-    padding: 1%;  
-    -webkit-box-shadow: -1px 1px 50px 10px rgba(0,0,0,0.9); 
-    box-shadow: -1px 1px 50px 10px rgba(0,0,0,.95);
+.top h1 {
+    font-size: 2 em
+    margin-top: 5vw;
 }
 
-
-.timeline{
- /*   border-top: 5px solid white; */
-    top: 0px;
-	position:absolute;
-	display:flex;
-	flex-direction:column;
-	list-style:none;
-	padding-top: 20px;
-
-   
-}
-/* the timeline's center vertical line */
-.timeline:before{
-	content:"";
-	position:absolute;
-	top:-100px; 
-	bottom:0;
-    height: 13000px;      /*height of line */
-	left:75%;
-	width: 0.5vw;
-	background-color: rgba(0, 0, 0, .8);
+.top h2 {
+    font-size:  1.5em;
 }
 
-
-.timeline li{
-	border-top:5px solid #000000; /* top border when coming out */
-	position:relative;
-	width:50%;
-	min-height:100px;
-	margin-bottom:20px;
-	padding: 20px 40px;
-	text-align: right;
-	transition:.3s;
-	opacity:1;
-	/* transform: translateX(-10%); */
-    margin-left: 25.5%;  /* moves left boxes to the left */
-  
-}
-/* the rounded mark on each timeline item */
-.timeline li:before {
-	content:"";
-	width: 1.5vw;
-	height: 3vw;
-	position: absolute;
-	top: 50%;
-	right: 0;
-	background: #858483;
-	border-radius:50%;
-	box-sizing:border-box;
-	transform: translate(50%,-50%); 
-}
-.timeline h3 {
-	font-size:28px;
-	margin-bottom: 10px;
-}
-.timeline p {
-  font-size: 20px;
- /*  line-height: 28px; */
-}
-
-/* li on the right */
-.timeline li:nth-child(2n) {
-	align-self: flex-end;
-	text-align: left;
-    left: 25%;   /* moves boxes on the right left and right */
-	/* transform: translateX(10%); */  /* this adds white space on the right */
-    /* margin: 5%; */  /* removes white space */
+.top h3 {
+    font-size: 1.5em;
 }
     
     
-
-.timeline li:nth-child(2n):before {
-	left: 0;
-  transform: translate(-50%,-50%);
-}
-.timeline li.visible {
-	opacity:1;
-	transform:translateX(0);
-}
-
-
-.twentiesDates {
-  
+ table {
+    width: 85vw;
+}   
+    
+.topSearch {
+    position: sticky;
+    top: 0;
+    height: 200px;
 }
 
+.form-control {
+border: rgba(255, 255, 255,1);
+}    
+      
 
-.thirtiesDates {
-    top: 500px;
+#specializationsDropdown {
+    font-size: 2vw;
+    width: 25vw;
+    margin-left: 24%;
+    height: 25%;
 }
 
+    /* added this */
+    #btnReset{
+  border-radius: .9vw;
+        margin-top: .7%;
+    }
 
-.fourtiesDates {
-    top: 900px;
+.btnReset1 {
+    margin-left: 50%;
+    cursor: pointer;
+    height: 4vw;
 }
 
-.fiftiesDates {
-    top: 1300px;
+#citiesDropdown {
+    font-size: 2vw;
+    width: 20vw;
+    margin-left: 13%;
+    height: 25%;
 }
-
-.sixtiesDates {
-    top: 1700px;
+    
+.btnReset2 {
+    cursor: pointer;
+    margin-left: 34%;
+    height: 4vw;
 }
-
-.seventiesDates {
-    top: 2100px;
+    
+div.dropdown-menu.open{
+    max-height: 1vw !important;
+    overflow: hidden;
 }
-
-.eightiesDates {
-    top: 2500px;
+    
+ul.dropdown-menu.inner{
+    max-height: 1vw !important;
+    overflow-y: auto;
 }
-
-.ninetiesDates {
-    top: 2900px;
+    
+th {
+    pointer-events: none;
+    position: sticky;
+    top: 200px;
+    padding: 1vw;
+    font-size: 1.25em;
 }
-
-.twoThousandsDates {
-    top: 3400px;
+    
+td {
+    font-size: .7em;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 3vw;
+    padding-top: 1vw;
 }
-
-.twentyTensDates {
-    top: 3900px;
-}
-
-.twentyTwentiesDates {
-    top: 4300px;
-}
-
-.twenties {
-    height: 1300px;
-    background-color: #000000;
-background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%2300b74c' fill-opacity='.75'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
-.thirties {
-    height: 1200px;
-background-color: #121212;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 28' width='56' height='28'%3E%3Cpath fill='%23fbbf00' fill-opacity='1' d='M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z'%3E%3C/path%3E%3C/svg%3E");
-
-}
-
-.fourties {
-    height: 1200px;
-background-color: #000000;
-background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%230b6ec0' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
-
-}
-
-.fifties {
-    height: 1200px;
-background-color: #000000;
-background-image: url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 70 70' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fb6219' fill-opacity='0.9' fill-rule='evenodd'%3E%3Cpath d='M0 0h35v35H0V0zm5 5h25v25H5V5zm5 5h15v15H10V10zm5 5h5v5h-5v-5zM40 5h25v25H40V5zm5 5h15v15H45V10zm5 5h5v5h-5v-5zM70 35H35v35h35V35zm-5 5H40v25h25V40zm-5 5H45v15h15V45zm-5 5h-5v5h5v-5zM30 40H5v25h25V40zm-5 5H10v15h15V45zm-5 5h-5v5h5v-5z'/%3E%3C/g%3E%3C/svg%3E");
-
-}
-
-.sixties {
-    height: 1200px;
-background-color: #000000;
-background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 15l15 15H0V15zM15 0l15 15V0H15z' fill='%23934f9d' fill-opacity='0.9' fill-rule='evenodd'/%3E%3C/svg%3E");
-
-}
-
-.seventies {
-    height: 1200px;
-background-color: #000000;
-background-image: url("data:image/svg+xml,%3Csvg width='24' height='40' viewBox='0 0 24 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40c5.523 0 10-4.477 10-10V0C4.477 0 0 4.477 0 10v30zm22 0c-5.523 0-10-4.477-10-10V0c5.523 0 10 4.477 10 10v30z' fill='%23fb6219' fill-opacity='.9' fill-rule='evenodd'/%3E%3C/svg%3E");
-
-}
-
-.eighties {
-    height: 1200px;
-background-color: #000000;
-background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 0H0v36h36V0zM15.126 2H2v13.126c.367.094.714.24 1.032.428L15.554 3.032c-.188-.318-.334-.665-.428-1.032zM18 4.874V18H4.874c-.094-.367-.24-.714-.428-1.032L16.968 4.446c.318.188.665.334 1.032.428zM22.874 2h11.712L20 16.586V4.874c1.406-.362 2.512-1.468 2.874-2.874zm10.252 18H20v13.126c.367.094.714.24 1.032.428l12.522-12.522c-.188-.318-.334-.665-.428-1.032zM36 22.874V36H22.874c-.094-.367-.24-.714-.428-1.032l12.522-12.522c.318.188.665.334 1.032.428zm0-7.748V3.414L21.414 18h11.712c.362-1.406 1.468-2.512 2.874-2.874zm-18 18V21.414L3.414 36h11.712c.362-1.406 1.468-2.512 2.874-2.874zM4.874 20h11.712L2 34.586V22.874c1.406-.362 2.512-1.468 2.874-2.874z' fill='%230b6ec0' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
-
-}
-
-.nineties {
-    height: 1300px;
-background-color: #000000;
-background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23fbbf00' fill-opacity='0.9'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-
+    
+    
+ #myBtn {
+  display: none; /* Hidden by default */
+  position:relative; 
+margin-left: 10%;
+        margin-top: -10%;
+ /* bottom: 10vw; */
+ /* right: 6vw; */
+  border: none; 
+  outline: none; 
+  background-color: #17b03b; 
+  color: #ffffff; 
+  cursor: pointer; 
+  padding: 1.5%;
+  border-radius: 1vw; 
+  font-size: 2em; 
+  width: 100px;
+  height: 100px;
+        z-index: 100;
 }
 
 
-.twoThousands {
-    height: 1300px;
-background-color: #000000;
-background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%23934f9d' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
 
-}
+    
+    
+  .form-control {
+    border: 3px solid #dddddd; /* removes default text input border */
+    border-radius: .5vw;
+    width: 50vw;   
+    font-size: 150%;
+    margin-top: 3vw;
+    outline: 0;
+    font-weight: 900;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; /* Keeps the text input centered */
+    padding: .5vw;
 
-.twentyTens {
-    height: 1200px;
-background-color: #d04a04;
-background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='%23000000' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
-
-}
-
-.twentyTwenties {
-    height: 1200px;
-    margin-bottom: -50%;  /* removes the white space on the bottom */
-background-color: #000000;
-background-image: url("data:image/svg+xml,%3Csvg width='24' height='20' viewBox='0 0 24 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 18c0-1.105.887-2 1.998-2 1.104 0 2-.895 2.002-1.994V14v6h-4v-2zM0 13.998C0 12.895.888 12 2 12c1.105 0 2 .888 2 2 0 1.105.888 2 2 2 1.105 0 2 .888 2 2v2H0v-6.002zm16 4.004A1.994 1.994 0 0 1 14 20c-1.105 0-2-.887-2-1.998v-4.004A1.994 1.994 0 0 0 10 12c-1.105 0-2-.888-2-2 0-1.105-.888-2-2-2-1.105 0-2-.887-2-1.998V1.998A1.994 1.994 0 0 0 2 0a2 2 0 0 0-2 2V0h8v2c0 1.105.888 2 2 2 1.105 0 2 .888 2 2 0 1.105.888 2 2 2 1.105 0 2-.888 2-2 0-1.105.888-2 2-2 1.105 0 2-.888 2-2V0h4v6.002A1.994 1.994 0 0 1 22 8c-1.105 0-2 .888-2 2 0 1.105-.888 2-2 2-1.105 0-2 .887-2 1.998v4.004z' fill='%2300b74c' fill-opacity='.9' fill-rule='evenodd'/%3E%3C/svg%3E");
+    margin-bottom: 4%;
+}  
+    
+    
+    
 }
